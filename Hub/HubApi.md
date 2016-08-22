@@ -1,10 +1,4 @@
-** **
-
-THIS DOC IS NOW TRACKED HERE:
-
-https://github.com/BroadsoftLabs/BroadsoftExternalDocs/blob/master/Hub/HubApi.md
-
-**UC-One Hub API**
+# UC-One Hub API
 
 Broadsoft Labs
 
