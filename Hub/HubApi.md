@@ -85,7 +85,7 @@ As you build your integration into Hub, your application data will be inserted t
 
 Below is an illustration of how the three components of Hub (Notifications, Contextual, MicroApp) integrate into the UC-One Chrome experience.
 
-![](https://github.com/BroadsoftLabs/BroadsoftExternalDocs/raw/master/Hub/images/image1.png)
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image1.png)
 
 ## 1.1 Notifications 
 
