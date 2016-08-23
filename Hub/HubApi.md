@@ -32,8 +32,6 @@ Table Of Contents
 
 UC-One Hub APIs will allow BroadSoft Service Providers and Partners to leverage the Hub development framework to bring the power of cloud applications to their customers.  This document will outline how developers will engage the API to deliver a Hub application to enhance the overall experience of the BroadSoft client experience.  
 
- 
-
 # Intended Audience
 
 This document is intended to help developers build and maintain third party Hub integrations. Technical details will be provided that will aid you in calling the Hub API as well as best practices for working with Hub.
@@ -73,7 +71,6 @@ This document is intended to help developers build and maintain third party Hub 
     <td></td>
   </tr>
 </table>
-
 
 # 1.0 Overview
 
@@ -462,6 +459,7 @@ You can encode these tokens in any way you wish. The following examples are encr
 
 The following will occur if your application is set to Private upon registration and when a user tries to log in to your app from the settings page. We will open a page pointing to your server at:
 
+```
 GET
 
 URL: https://<yourBaseUrl>/v1/{yourAppName}/authenticate?hubUrl=[https://core.broadsoftlabs.com](https://core.broadsoftlabs.com)
@@ -479,6 +477,7 @@ Post Body: {
   auth: <any>
 
 }
+```
 
 Hub will store this token and associate with your application and a user. Then this token will be sent with all Hub requests. 
 
@@ -488,6 +487,7 @@ We will respond to the POST with a URL that you should be redirecting to in orde
 
 When the user opens the application, we will send you the following request:
 
+```
 POST:
 
 URL: https://<yourBaseUrl>/v1/:app/:username/notifications <private API>
@@ -499,6 +499,7 @@ Post Body:
   auth: <any> (optional)
 
 }
+```
 
 OR
 
@@ -506,6 +507,7 @@ URL: https://<baseUrl>/v1/:app/notifications <public API>
 
 This request will hit your API and you will respond with:
 
+```
 {
 
   count: <integer>,
@@ -513,6 +515,7 @@ This request will hit your API and you will respond with:
   refreshAt: <Time in milliseconds since January 1 1970 UTC IE: 1463661591313> (optional)
 
 }
+```
 
 If your application was registered as public, all optional parameters are not needed or will not be sent. 
 
@@ -522,9 +525,11 @@ The **refreshAt** value can be used for simulation push notifications is your ap
 
 Example in Javascript:
 
+```
 var refreshAt = new Date().getTime();
 
 //refreshAt = 1463661591313
+```
 
 ## 4.3 How to Update Contextual Data
 
@@ -532,12 +537,15 @@ When the user opens a conversation with one or many users, we will send you the 
 
 ![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image12.png)
 
+```
 POST
 
 URL: https://<yourBaseUrl>/v1/:app/:username/timeline <private API>
+```
 
 OR
 
+```
 URL: https://<yourBaseUrl>/v1/:app/timeline <public API>
 
 Post Body: 
@@ -605,6 +613,7 @@ Color: <string> (css color of the activated action)
  ]
 
 }
+```
 
 The **Auth** we send you will have been attained by Hub when a user activates your private application from the Hub settings page.
 
@@ -668,6 +677,7 @@ Download the heroku toolbelt here: [https://devcenter.heroku.com/articles/gettin
 
 In terminal write: 
 
+```
 Mkdir hostingTester
 
 Cd hostingTester
@@ -685,6 +695,7 @@ git commit -am 'my first commit'
 heroku create
 
 git push heroku master
+```
 
 Then follow the links in the heroku output to see your application hosted online. For more details please visit heroku.com.
 
@@ -728,6 +739,7 @@ The node version compatible with this project is 6.2.2 or later but earlier vers
 
 Run this in terminal:
 
+```
 git clone [https](https://github.com/BroadsoftLabs/triviaSampleApp.git)[://github.com/BroadsoftLabs/triviaSampleApp.git](https://github.com/BroadsoftLabs/triviaSampleApp.git)
 
 cd helloWorldSampleApp
@@ -737,6 +749,7 @@ npm i
 bower i
 
 sails lift --verbose
+```
 
 Your app should now be running in your browser at [http://localhost:5430/#/](http://localhost:5430/#/)
 
