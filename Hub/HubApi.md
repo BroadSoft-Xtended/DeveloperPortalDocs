@@ -89,6 +89,8 @@ Below is an illustration of how the three components of Hub (Notifications, Cont
 
 ## 1.1 Notifications 
 
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image2.png)
+
 In the notifications bar, you’ll have an icon for your application, which will act as a reference point for application notifications and navigation. This view is always shown while communicator is open and provides users a heads-up view of items that require their action and a point to navigate to different applications. 
 
 When a user clicks on the notifications icon that corresponds to your app, the MicroApp pane will then shift to your MicroApp pane regardless of where the user is in Communicator at the time.
@@ -101,11 +103,15 @@ What can I set here?
 
 ## 1.2 Contextual
 
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image3.png)
+
 This panel is shown when an end user interacts with another user through a chat or phone call. When this happens, all enabled apps that have the contextual box checked under settings are sent a request for all user data that they want to display in the contextual view. This data can send a maximum of 30 items on first call with additional content made available utilizing the "more" function. The next request to your API will ask for the next page.
 
 You will be able to display data here in a container 228px by 70px in size. Your icon will also be used here. This is the default size of the window but keep in mind that the user can expand this window to any height while leaving the width constant.
 
 ## 1.3 MicroApp
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image4.png)
 
 The micro app is where you can display any content that you would like for your application. You will display this information in the form of an iframe. The url of this iframe can be set when you register your application. It is a scrollable container and the header of this panel will have the name of the application that you registered with Hub. The settings link in the header takes you to the Hub settings page.
 
@@ -124,6 +130,8 @@ There are two places that the user can use the BroadSearch feature: In the micro
 In contextual, if you search the while in the "All" tab, you will search all applications at once. As you filter the contextual view to categories or subcategories, you then start to limit the scope of the BroadSearch feature to the desired applications.
 
 ## 1.6 Settings
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image5.png)
 
 When the user first logs into the Hub application, they will see a settings page for all applications.
 
@@ -312,15 +320,23 @@ Open Sans is the standard typeface for UC-One Hub, the font stack should specify
 
 **MicroApp Search Box**
 
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image6.png)
+
 **MicroApp Tabs Filter**
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image7.png)
 
 **MicroApp List Item**
 
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image8.png)
+
 **Contextual Timeline Item **
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image9.png)
 
 2.5.2 Colors
 
-![image alt text](image_0.jpg)
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image10.png)
 
 ## 2.6 Gathering data from users
 
@@ -357,6 +373,8 @@ This is in place as there are several apps loading data and it is better to only
 When a user attempts to search your data that you provide in your microapp, you should attempt to provide search results as quickly as possible. Your application should search all front end results initially and filter them on the front end for the user to view. This should be the first  stage of your search. While you are filtering your front end results, you should also search your backend for the data as well and once the results come back from your server, you will need to merge the two searches.
 
 ## 2.11 Sub-Filters for MicroApp Data
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image11.png)
 
 If you wish to filter your data into multiple views you will need to have a sun-filters in your micro app.
 
@@ -511,6 +529,8 @@ var refreshAt = new Date().getTime();
 ## 4.3 How to Update Contextual Data
 
 When the user opens a conversation with one or many users, we will send you the following post request:
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image12.png)
 
 POST
 
