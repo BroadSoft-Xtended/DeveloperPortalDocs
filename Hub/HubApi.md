@@ -740,7 +740,7 @@ The node version compatible with this project is 6.2.2 or later but earlier vers
 Run this in terminal:
 
 ```
-git clone [https](https://github.com/BroadsoftLabs/triviaSampleApp.git)[://github.com/BroadsoftLabs/triviaSampleApp.git](https://github.com/BroadsoftLabs/triviaSampleApp.git)
+git clone [https](https://github.com/BroadsoftLabs/helloWorldSampleApp.git)[://github.com/BroadsoftLabs/helloWorldSampleApp.git](https://github.com/BroadsoftLabs/helloWorldSampleApp.git)
 
 cd helloWorldSampleApp
 
@@ -779,23 +779,23 @@ Test your code in the micro apps and notifications
 
 Test your app in contextual with another user by creating a custom contact
 
-## 7.3 How Does the Trivia App Work?
+## 7.3 How Does the Hello World App Work?
 
-The technologies used for this application can be found in the package.json file for the app. [https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/package.json](https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/package.json)
+The technologies used for this application can be found in the package.json file for the app. [https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/package.json](https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/package.json)
 
 The main technology is SailsJS, a wrapper for express. ([http://sailsjs.org/](http://sailsjs.org/))
 
 The application that you write can be in any technology as long as you can make REST requests to the Hub Core server.
 
-In this application all the rest routes are defined here: [https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/config/routes.js](https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/config/routes.js)
+In this application all the rest routes are defined here: [https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/config/routes.js](https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/config/routes.js)
 
 This is where the backend interacts with the Hub API.
 
-Custom authentication to Hub can be viewed here: [https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/api/controllers/OAuthController.js](https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/api/controllers/OAuthController.js)
+Custom authentication to Hub can be viewed here: [https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/api/controllers/OAuthController.js](https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/api/controllers/OAuthController.js)
 
 Hub Core will also query your application with the timeline route for contextual data and the notifications route for the notifications count. 
 
-https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/api/controllers/TriviaController.js 
+https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/api/controllers/HelloWorldController.js 
 
 # 8.0 Working with your BroadsoftLabs Account
 
