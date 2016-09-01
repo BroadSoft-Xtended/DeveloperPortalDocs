@@ -796,3 +796,21 @@ Custom authentication to Hub can be viewed here: [https://github.com/BroadsoftLa
 Hub Core will also query your application with the timeline route for contextual data and the notifications route for the notifications count. 
 
 https://github.com/BroadsoftLabs/triviaSampleApp/blob/master/api/controllers/TriviaController.js 
+
+# 8.0 Working with your BroadsoftLabs Account
+
+Log in to broadsoftlabs.com
+
+Then navigate here: https://broadsoftlabs.com/thelab/accounts
+
+You can either use an account that you have listed, or you can create a new one. ![](https://puu.sh/qf206/6bc10d1688.png)
+
+![](https://puu.sh/qf20K/7f96fc18b6.png)
+
+Then you need to manually set the password on this page: https://broadsoftlabs.com/thelab/accounts
+
+Click the crayon edit button on hover and you can then update your password
+
+![](https://puu.sh/qf23u/a53fe0c2ed.png)
+
+Then click the green check mark. Now you should be able to log into the dev portal with these two fields: ![](https://puu.sh/qf26m/5f069f4697.png)
