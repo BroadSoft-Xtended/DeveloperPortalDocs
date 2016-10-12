@@ -1,23 +1,5 @@
 # UC-One Hub API
 
-Broadsoft Labs
-
-**Version 1.0.3**
-
-Released: July 2016
-
-**The following team members contributed to this document:**
-
-Jonathan O’Donnell
-
-Dominik Steiner
-
-Nathan Stratton
-
-Matt Horning
-
-Amir Mehmood
-
 **About Broadsoft Labs**
 
 Broadsoft Labs is one of the research and development teams within Broadsoft.  The team is focused on bringing new technology ideas to the BroadSoft Product group. UC-One Hub is an idea incubated within Labs to enhance the UC-One client experience and is currently in customer beta.  
@@ -35,42 +17,6 @@ UC-One Hub APIs will allow BroadSoft Service Providers and Partners to leverage 
 # Intended Audience
 
 This document is intended to help developers build and maintain third party Hub integrations. Technical details will be provided that will aid you in calling the Hub API as well as best practices for working with Hub.
-
-# Document Updates
-
-<table>
-  <tr>
-    <td>Version </td>
-    <td>Date</td>
-    <td>Summary</td>
-  </tr>
-  <tr>
-    <td>1.0</td>
-    <td>Jun 22, 2016</td>
-    <td>Updating the titles, formatting and document initialization</td>
-  </tr>
-  <tr>
-    <td>1.0.1</td>
-    <td>Jun 27, 2016</td>
-    <td>Updating as per a Hub Meeting with more functionality and some specific requirements</td>
-  </tr>
-  <tr>
-    <td>1.0.2</td>
-    <td>July 5, 2016</td>
-    <td>Updated formatting and content
-</td>
-  </tr>
-  <tr>
-    <td>1.03</td>
-    <td>July 14, 2016</td>
-    <td>Updated the doc sections 6 and 7. Addressed some questions from meetings</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
 
 # 1.0 Overview
 
