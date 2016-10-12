@@ -383,33 +383,7 @@ Your application may have several other types of widgets and tools in order to i
 
 # 3.0 Register Your App
 
-Before you can update any data within Hub, you must register your application. To do this, send an email to hub@broadsoftlabs.com (in the future, this will be done through a web portal) with the following details:
-
-**To**: [hub@broadsoftlabs.com](mailto:hub@broadsoftlabs.com)
-
-**Subject**: Hub registration for app: <your-app-name>
-
-**Body**:
-
-* **Company: **Name of Company or service provider that is providing the app.
-
-* **App N****ame**: The name of your application.
-
-* **Type of App: **Microapp, Contextual, MicroApp Only, or Contextual Only.
-
-* **App Category:** What category does the app belong? You must choose from: Dialogue, Files, Social, Teams, Utilities.
-
-* **Sub-category:** Provide the name of your subcategory. This is limited to 10 characters.
-
-* **Icon**: This is the icon that we will display in the notifications panel of Hub. It must be in the form of a WOFF file. The icon in your font file must be set to the \e0 character
-
-* **Icon Color**: Hex code of your preferred color. Ex: #f00
-
-* **Scope: **Is this app offered to service provider, or everyone?
-
-* **Is This a Public API**: This is a true or false value that indicates if you would like to send private user data to Hub. This requires an authentication method that Hub can access when making requests.
-
-* **Base URL**: Where your application or API is publicly hosted. This may also include a port if applicable. This is referenced as <integration.host>:<port> in this document.
+Before you can update any data within Hub, you must register your application. To do this go here https://hub-sandbox.broadsoftlabs.com/#/app/settings then log in and create apps.
 
 # 4.0 API overview
 
@@ -701,7 +675,7 @@ Then follow the links in the heroku output to see your application hosted online
 
 ## 5.3 App Registration
 
-Once you are pleased with your application and it has been fully tested, you can register your application with Broadsoft Labs as previously described. The Hub team will review your application and then enable your application on our Hub staging servers where you can fully test the integrated solution.
+Once you are pleased with your application and it has been fully tested, you can register your application here: https://hub-sandbox.broadsoftlabs.com/#/app/settings by clicking on build or manage tabs once logged in.
 
 ## 5.4 Test On Staging
 
@@ -715,9 +689,9 @@ We will be looking for bugs, UI defects, UI general styling and security vulnera
 
 You will work with the Hub team to set a reasonable production release date.
 
-# 6.0 Hub Developer Portal (Coming Soon)
+# 6.0 Hub Developer Portal
 
-In this tool, you will be able to fully test your application while only needing your own local code to do so. Here you will register applications and schedule releases for your product. This is also where you will receive feedback during the review process.
+https://hub-sandbox.broadsoftlabs.com
 
 # 7.0 Sample Application Guide and Troubleshooting
 
@@ -799,18 +773,4 @@ https://github.com/BroadsoftLabs/helloWorldSampleApp/blob/master/api/controllers
 
 # 8.0 Working with your BroadsoftLabs Account
 
-Log in to broadsoftlabs.com
-
-Then navigate here: https://broadsoftlabs.com/thelab/accounts
-
-You can either use an account that you have listed, or you can create a new one. ![](https://puu.sh/qf206/6bc10d1688.png)
-
-![](https://puu.sh/qf20K/7f96fc18b6.png)
-
-Then you need to manually set the password on this page: https://broadsoftlabs.com/thelab/accounts
-
-Click the crayon edit button on hover and you can then update your password
-
-![](https://puu.sh/qf23u/a53fe0c2ed.png)
-
-Then click the green check mark. Now you should be able to log into the dev portal with these two fields: ![](https://puu.sh/qf26m/5f069f4697.png)
+Use the settings page of the portal to manage this: https://hub-sandbox.broadsoftlabs.com/#/app/settings
