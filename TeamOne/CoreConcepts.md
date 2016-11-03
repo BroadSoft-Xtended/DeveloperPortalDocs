@@ -10,7 +10,7 @@ It *is* an introduction to some of the core concepts you'll encounter within the
 
 <p><i style="color:#666">Relationships between several core entities within Intellinote.</i></p>
 </div>
-
+![](https://github.com/BroadsoftLabs/BroadsoftExternalDocs/blob/master/TeamOne/images/coreConcepts1.png)
 
 ## Users
 
