@@ -128,14 +128,25 @@ attributes:
  * `grant_type` - following the OAuth2 specification, this must be the
    value `authorization_code`.
 
-{/markdown}
-{>"_code_samples_basic_post.dust"
-host="{request.url.hostname}"
-path="/auth/oauth2/access"
-content_type="application/json"
-payload="{\"code\":\"h4iu8zs29zy9cnmi840ub5bete3o9a4i\",\"client_id\":\"lsJLcwxUyll0p\",\"client_secret\":\"MkalkvoRGBZP1O\",\"grant_type\":\"authorization_code\"}"
-/}
-{@markdown}
+```javascript
+var request = require("request"); // https://www.npmjs.org/package/request
+var headers = { "Content-Type": "{content_type}" };
+var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
+var payload = '{payload|s}';
+
+console.log("REQUEST: POST "+ url);
+request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -192,14 +203,25 @@ attributes:
  * `grant_type` - following the OAuth2 specification, this must be the
    value `refresh_token`.
 
-{/markdown}
-{>"_code_samples_basic_post.dust"
-host="{request.url.hostname}"
-path="/auth/oauth2/access"
-content_type="application/json"
-payload="{\"token\":\"a29cf572ccdb7924d2c35ca95753f233\",\"client_id\":\"lsJLcwxUyll0p\",\"client_secret\":\"MkalkvoRGBZP1O\",\"grant_type\":\"refresh_token\"}"
-/}
-{@markdown}
+```javascript
+var request = require("request"); // https://www.npmjs.org/package/request
+var headers = { "Content-Type": "{content_type}" };
+var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
+var payload = '{payload|s}';
+
+console.log("REQUEST: POST "+ url);
+request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -332,14 +354,25 @@ attributes:
  * `grant_type` - following the OAuth2 specification, this must be the
    value `client_credentials`.
 
-{/markdown}
-{>"_code_samples_basic_post.dust"
-host="{request.url.hostname}"
-path="/auth/oauth2/access"
-content_type="application/json"
-payload="{\"client_id\":\"lsJLcwxUyll0p\",\"client_secret\":\"MkalkvoRGBZP1O\",\"grant_type\":\"client_credentials\"}"
-/}
-{@markdown}
+```javascript
+var request = require("request"); // https://www.npmjs.org/package/request
+var headers = { "Content-Type": "{content_type}" };
+var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
+var payload = '{payload|s}';
+
+console.log("REQUEST: POST "+ url);
+request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -374,9 +407,26 @@ With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP
 
 ### Request
 
-{/markdown}
-{>"_code_samples_basic_get.dust" path="/v2.0/orgs" access_token="9m74lrwlcubu766rbmkqp2srche8w7b9"/}
-{@markdown}
+```javascript
+var request      = require("request"); // https://www.npmjs.org/package/request
+var access_token = "{access_token}";
+var headers      = { Authorization: "Bearer " + access_token };
+var url          = "https://{request.url.hostname}" +
+                   "{@uri path="{path|s}"/}";
+
+console.log("REQUEST: GET "+ url);
+request.get( url, {headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -405,9 +455,26 @@ With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP
 
 ### Request
 
-{/markdown}
-{>"_code_samples_basic_get.dust" path="/v2.0/orgs/251/workspaces" access_token="9m74lrwlcubu766rbmkqp2srche8w7b9"/}
-{@markdown}
+```javascript
+var request      = require("request"); // https://www.npmjs.org/package/request
+var access_token = "{access_token}";
+var headers      = { Authorization: "Bearer " + access_token };
+var url          = "https://{request.url.hostname}" +
+                   "{@uri path="{path|s}"/}";
+
+console.log("REQUEST: GET "+ url);
+request.get( url, {headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -442,9 +509,26 @@ With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP
 
 The request may contain one of several query-string parameters that filter or otherwise determine the list of notes that are returned.  In this case, we'll use `note_type=NOTE` to limit the response to true notes (as opposed to tasks or discussions).
 
-{/markdown}
-{>"_code_samples_basic_get.dust" path="/v2.0/orgs/251/workspace/1143/notes?note_type=NOTE" access_token="9m74lrwlcubu766rbmkqp2srche8w7b9"/}
-{@markdown}
+```javascript
+var request      = require("request"); // https://www.npmjs.org/package/request
+var access_token = "{access_token}";
+var headers      = { Authorization: "Bearer " + access_token };
+var url          = "https://{request.url.hostname}" +
+                   "{@uri path="{path|s}"/}";
+
+console.log("REQUEST: GET "+ url);
+request.get( url, {headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 
 ### Response
 
@@ -515,8 +599,26 @@ The request may contain one of several query-string parameters that filter or ot
 
 ### Request
 
-{/markdown}
-{>"_code_samples_basic_get.dust" path="/v2.0/orgs/251/workspace/1143/notes?note_type=TASK&complete=false&assignee=user525" access_token="9m74lrwlcubu766rbmkqp2srche8w7b9"/}
+```javascript
+var request      = require("request"); // https://www.npmjs.org/package/request
+var access_token = "{access_token}";
+var headers      = { Authorization: "Bearer " + access_token };
+var url          = "https://{request.url.hostname}" +
+                   "{@uri path="{path|s}"/}";
+
+console.log("REQUEST: GET "+ url);
+request.get( url, {headers:headers,json:true}, function(err,response,body) {
+  if(err) {
+    console.error("Encountered an error",err);
+    process.exit(2);
+  } else {
+    console.log("RESPONSE: Status "+ response.statusCode);
+    if(body) {
+      console.log(JSON.stringify(body,null,2));
+    }
+  }
+});
+```
 {@markdown}
 
 ### Response
