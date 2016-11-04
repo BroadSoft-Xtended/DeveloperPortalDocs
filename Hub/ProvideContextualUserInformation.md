@@ -1,1 +1,1 @@
-# UC-One Hub API - How to Provide Contextual User Information
+# How to Provide Contextual User Information

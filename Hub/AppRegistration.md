@@ -1,4 +1,4 @@
-# UC-One Hub API - App Registration Process
+# App Registration Process
 
 # Register Your App
 

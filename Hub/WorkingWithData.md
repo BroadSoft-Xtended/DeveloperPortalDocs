@@ -1,4 +1,4 @@
-# UC-One Hub API - Working With Data
+# Working With Data
 
 ## Gathering data from users
 

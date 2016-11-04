@@ -1,4 +1,4 @@
-# UC-One Hub API - How to make phone calls
+# How to make phone calls
 
 window.parent.postMessage({api: {
 

@@ -1,4 +1,4 @@
-# UC-One Hub API - Frequently Asked Questions
+# Frequently Asked Questions
 
 ## What does contextual really mean?
 

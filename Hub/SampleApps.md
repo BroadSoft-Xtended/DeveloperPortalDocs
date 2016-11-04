@@ -1,4 +1,4 @@
-# UC-One Hub API - Sample Application Guide and Troubleshooting
+# Sample Application Guide and Troubleshooting
 
 Check out our hub sample application on github:
 

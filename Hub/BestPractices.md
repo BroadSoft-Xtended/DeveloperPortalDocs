@@ -1,4 +1,4 @@
-# UC-One Hub API - Best Practices
+# Best Practices
 
 Your application code will need to be submitted for review by a member of the Broadsoft Labs team. This review process may take some time so it is in everyone’s best interest to get your app in the best state possible prior to submitting the app for approval. Here are some things that will be reviewed in this process and some tips on how to minimize the review process time.
 

@@ -1,4 +1,4 @@
-# UC-One Hub API - API Authorization
+# API Authorization
 
 # Overview
 

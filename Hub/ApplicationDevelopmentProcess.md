@@ -1,4 +1,4 @@
-# UC-One Hub API - Application Development Process
+# Application Development Process
 
 ## Make it
 

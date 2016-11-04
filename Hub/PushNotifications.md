@@ -1,4 +1,4 @@
-# UC-One Hub API - Push Notifications
+# Push Notifications
 
 Whenever this route is called, Hub will attempt to call your application for notifications and contextual data and update the user interface with that new data.
 

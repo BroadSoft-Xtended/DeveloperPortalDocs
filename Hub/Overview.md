@@ -1,4 +1,4 @@
-# UC-One Hub API - Overview
+# Overview
 
 UC-One Hub APIs will allow BroadSoft Service Providers and Partners to leverage the Hub development framework to bring the power of cloud applications to their customers.  This document will outline how developers will engage the API to deliver a Hub application to enhance the overall experience of the BroadSoft client experience.  
 

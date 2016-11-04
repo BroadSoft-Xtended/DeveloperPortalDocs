@@ -1,4 +1,4 @@
-# UC-One Hub API - Updating Notifications
+# Updating Notifications
 
 ## How to Update the Notifications Count:
 

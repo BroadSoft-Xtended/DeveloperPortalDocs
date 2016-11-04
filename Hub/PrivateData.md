@@ -1,4 +1,4 @@
-# UC-One Hub API - How to support Private Data
+# How to support Private Data
 
 Please contact me at jodonnell@broadsoft.com since this is not yet supported by the portal and the work must be done manually.
 
