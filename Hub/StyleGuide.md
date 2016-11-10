@@ -6,7 +6,7 @@ For a Hub app to be approved it must be submitted to the Hub UI team for approva
 
 Text should be understandable by anyone, anywhere, regardless of their culture or language. Clear, accurate, and concise text makes interfaces more usable.
 
-Open Sans is the standard typeface for UC-One Hub, the font stack should specify Open Sans, Arial, and then sans-serif.
+Open Sans is the standard typeface for Hub, the font stack should specify Open Sans, Arial, and then sans-serif.
 
 ## MicroApp Search Box
 

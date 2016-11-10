@@ -1,12 +1,12 @@
 # Overview
 
-UC-One Hub APIs will allow BroadSoft Service Providers and Partners to leverage the Hub development framework to bring the power of cloud applications to their customers.  This document will outline how developers will engage the API to deliver a Hub application to enhance the overall experience of the BroadSoft client experience.  
+Hub APIs will allow BroadSoft Service Providers and Partners to leverage the Hub development framework to bring the power of cloud applications to their customers.  This document will outline how developers will engage the API to deliver a Hub application to enhance the overall experience of the BroadSoft client experience.  
 
 ## Intended Audience
 
 This document is intended to help developers build and maintain third party Hub integrations. Technical details will be provided that will aid you in calling the Hub API as well as best practices for working with Hub.
 
-UC-One Hub is a BroadSoft cloud service providing direct access to cloud applications that have been pre-integrated with UC-One – allowing users to be more efficient and productive. These integrations bring a lite client experience and contextual data to your day-to-day communications via UC-One.  UC-One Communicator for Desktop-Chrome is the first client to be integrated with Hub, with other client experiences to follow.  
+ Hub is a BroadSoft cloud service providing direct access to cloud applications that have been pre-integrated with UC-One – allowing users to be more efficient and productive. These integrations bring a lite client experience and contextual data to your day-to-day communications via UC-One.  UC-One Communicator for Desktop-Chrome is the first client to be integrated with Hub, with other client experiences to follow.  
 
 To do this, Hub integrates into the Chrome client experience in three different ways, the MicroApp View, the Notification bar (which also serves as the navigation bar), and the Contextual data view.   
 

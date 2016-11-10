@@ -70,4 +70,4 @@ Post Body: {
 
 Hub will store this token and associate with your application and a user. Then this token will be sent with all Hub requests.
 
-We will respond to the POST with a URL that you should be redirecting to in order to display the UC-One Hub authentication success or error page.
+We will respond to the POST with a URL that you should be redirecting to in order to display the Hub authentication success or error page.
