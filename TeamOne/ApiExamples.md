@@ -1,6 +1,6 @@
 ## Obtain an API Key
 
-In order to use the Intellinote REST API you must obtain an *API Key*
+In order to use the Team One REST API you must obtain an *API Key*
 or *client_id* for your application.
 
 To obtain a *client_id*, send an email to the address
@@ -10,17 +10,17 @@ with the subject "API Key".
 You will receive an email that assigns two values:
 
  * A ***client_id***, such as `lsJLcwxUyll0p`, which identifies your
-  application to the Intellinote API.  The client_id is like a
+  application to the Team One API.  The client_id is like a
   username--unique to your application but not necessarily a secret.
 
  * A ***client_secret***, such as `MkalkvoRGBZP1O`, which authenticates
-  your application to the Intellinote API.  The client_secret is like a
-  password--it should remain a "shared secret" between Intellinote and
+  your application to the Team One API.  The client_secret is like a
+  password--it should remain a "shared secret" between Team One and
   your application.
 
 You'll use the *client_id* and *client_secret* values in order to
 obtain an *access token* that allows your application to access
-Intellinote on behalf of an end-user, as described below.
+Team One on behalf of an end-user, as described below.
 
 ---
 ## Obtain an *Authorization Code*
@@ -29,7 +29,7 @@ An ***authorization code*** is proof that a given end-user has authorized
 your application to act on his or her behalf.
 
 To obtain an *authorization code*, the end-user must log-in to
-Intellinote and grant your application access.
+Team One and grant your application access.
 
 To achieve this, direct the end-user to the path
 `/auth/oauth2/authorization` passing the following query string
@@ -69,10 +69,10 @@ For example, you might provide the user with a direct link in your
 HTML code:
 
 ```html
-<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Intellinote Account</a>
+<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Team One Account</a>
 ```
 
-or your server might redirect the user to Intellinote by returning a
+or your server might redirect the user to Team One by returning a
 HTTP 302 response:
 
 ```http
@@ -81,11 +81,11 @@ Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?respo
 ```
 
 The end-user will be presented with a form by which she can authorize
-your application to access her Intellinote account. (Or more
-specifically, access the Intellinote *scopes* enumerated in the query
+your application to access her Team One account. (Or more
+specifically, access the Team One *scopes* enumerated in the query
 string.)
 
-After a succesful authorization, Intellinote will redirect the user's
+After a succesful authorization, Team One will redirect the user's
 browser back to the `redirect_uri` you provided, with the
 *authorization code* added a query string parameter named `code`.
 
@@ -102,7 +102,7 @@ end-user's account.
 ## Obtain an *Access Token* and *Refresh Token*
 
 An ***access token*** is a credential that gives your application
-(temporary) access to an end-user's Intellinote account.
+(temporary) access to an end-user's Team One account.
 
 A ***refresh token*** is a credential that allows your application
 to obtain a new  *access token* when the current one becomes stale.
@@ -150,7 +150,7 @@ request.post( url, {body:payload,headers:headers,json:true}, function(err,respon
 
 ### Response
 
-If successful, the Intellinote server will return a JSON document
+If successful, the Team One server will return a JSON document
 containing the *refresh_token* assigned to your application and an
 active *access_token* that be used immediately for access.
 
@@ -165,7 +165,7 @@ Content-Type: application/json
 ```
 
 You may then use the *access token* to submit requests to the
-Intellinote API on behalf of the end-user.
+Team One API on behalf of the end-user.
 
 Note that for security reasons, the *access token* value is only valid
 for a short time.  If you submit an API request with a "stale"
@@ -225,7 +225,7 @@ request.post( url, {body:payload,headers:headers,json:true}, function(err,respon
 
 ### Response
 
-If successful, the Intellinote server will return a JSON document
+If successful, the Team One server will return a JSON document
 containing an active *access_token* that be used immediately for
 access to the end-user's account.
 
@@ -249,7 +249,7 @@ Content-Type: application/json
 The OAuth2 *implicit workflow* is an alternative to [the *authorization-token*-based process described above](#obtain-an-access-token-).
 
 In the *implicit workflow* no persistent *refresh token* is
-provided.  The end-user must authenticate to the Intellinote service
+provided.  The end-user must authenticate to the Team One service
 (and if necessary, authorize your application's access) every time an
 *access token* is needed.
 
@@ -258,7 +258,7 @@ mobile-device based) applications that (a) do not have a (secure)
 server-side component at which the *client_secret* value can be
 stored and from which the server-to-server request is submitted, and
 (b) for which the end-user will be actively using whenever the
-application needs to invoke the Intellinote API.
+application needs to invoke the Team One API.
 
 In the *implicit workflow* the *access token* is both requested and delivered by URLs exchanged between applications by re-directing the end-user's browser.
 
@@ -300,10 +300,10 @@ For example, you might provide the user with a direct link in your
 HTML code:
 
 ```html
-<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Intellinote Account</a>
+<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Team One Account</a>
 ```
 
-or your server might redirect the user to Intellinote by returning a
+or your server might redirect the user to Team One by returning a
 HTTP 302 response:
 
 ```http
@@ -313,11 +313,11 @@ Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?respo
 
 The end-user must authenticate and (if she hasn't done this already)
 is presented with a form by which she can authorize
-your application to access her Intellinote account. (Or more
-specifically, access the Intellinote *scopes* enumerated in the query
+your application to access her Team One account. (Or more
+specifically, access the Team One *scopes* enumerated in the query
 string.)
 
-After a succesful authorization, Intellinote will redirect the user's
+After a succesful authorization, Team One will redirect the user's
 browser back to the `redirect_uri` you provided, with the
 *access token* added a query string parameter named `token`.
 
@@ -325,7 +325,7 @@ browser back to the `redirect_uri` you provided, with the
 https://example.com/oauth/callback?token=9m74lrwlcubu766rbmkqp2srche8w7b9
 ```
 
-You may then use the *access token* to submit requests to the Intellinote API on behalf of the end-user.
+You may then use the *access token* to submit requests to the Team One API on behalf of the end-user.
 
 Note that for security reasons, the *access token* value is only valid for a short time.  If you submit an API request with a "stale" *access token*, the server will respond with an HTTP 401 ("Unauthorized") status.  This indicates that you must re-submit the request above to "refresh" the token.
 
@@ -333,11 +333,11 @@ Note that for security reasons, the *access token* value is only valid for a sho
 
 ## Perform a userless (application-level) log-in
 
-Some Intellinote API methods can be invoked outside of any specific "user context".
+Some Team One API methods can be invoked outside of any specific "user context".
 
 For example an application can create a new user record (via `POST /user`) without being authorized for access to any existing user's account.
 
-If your application has been authorized (by Intellinote) to do so, it can peform a type of "user-less" OAuth2 authentication known as a "client_credentials" grant.  This "userless" application log-in generates an *access token* and *refresh token* like any other OAuth2 authorization process.  The resulting *access token* will allow the application to interact with the Intellinote API on its own behalf--independent of any user accounts.
+If your application has been authorized (by Team One) to do so, it can peform a type of "user-less" OAuth2 authentication known as a "client_credentials" grant.  This "userless" application log-in generates an *access token* and *refresh token* like any other OAuth2 authorization process.  The resulting *access token* will allow the application to interact with the Team One API on its own behalf--independent of any user accounts.
 
 The process for obtaining an *access token* via the `client_credentials` grant is very similiar to the process used to obtain an *access token* using the `authorization_code` and `refresh_token` grant types.
 
@@ -376,7 +376,7 @@ request.post( url, {body:payload,headers:headers,json:true}, function(err,respon
 
 ### Response
 
-If successful, the Intellinote server will return a JSON document
+If successful, the Team One server will return a JSON document
 containing the *refresh_token* assigned to your application and an
 active *access_token* that be used immediately for access.
 
@@ -391,7 +391,7 @@ Content-Type: application/json
 ```
 
 You may then use the *access token* to submit requests to the
-Intellinote API.
+Team One API.
 
 Note that for security reasons, the *access token* value is only valid
 for a short time.  If you submit an API request with a "stale"

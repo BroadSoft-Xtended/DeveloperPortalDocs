@@ -1,21 +1,21 @@
 ---
 Core Concepts
-A brief overview of the primary objects or "resources" within&nbsp;Intellinote.
+A brief overview of the primary objects or "resources" within&nbsp;Team One.
 
 This document is *not* a data-dictionary nor a comprehensive technical reference.
 
-It *is* an introduction to some of the core concepts you'll encounter within the Intellinote API, intended to help you better understand and navigate the Intellinote framework.
+It *is* an introduction to some of the core concepts you'll encounter within the Team One API, intended to help you better understand and navigate the Team One framework.
 ---
 
 
-<p><i style="color:#666">Relationships between several core entities within Intellinote.</i></p>
+<p><i style="color:#666">Relationships between several core entities within Team One.</i></p>
 </div>
 
 ![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/coreConcepts1.png)
 
 ## Users
 
-A ***user*** is an account within Intellinote.
+A ***user*** is an account within Team One.
 
 *Users* have a handful of common attributes, including:
 
@@ -28,14 +28,14 @@ A ***user*** is an account within Intellinote.
  * `tel_cell` - mobile phone (optional).
  * `avatar` - URL of the user's avatar image.
 
-Intellinote *user* attributes are inspired by and largely compatible
+Team One *user* attributes are inspired by and largely compatible
 with the [vCard](http://en.wikipedia.org/wiki/VCard) standard.
 
 
 
 ## Notes
 
-A ***note*** is the fundamental unit of content within Intellinote.
+A ***note*** is the fundamental unit of content within Team One.
 
 *Notes* have several core attributes, including:
 
@@ -44,7 +44,7 @@ A ***note*** is the fundamental unit of content within Intellinote.
  * `body` - the text of the *note* (optional).
  * `note_type` - the kind or sub-type of note, such as "task" (required).
 
-Intellinote defines several kinds of *note*, such as NOTEs, TASKs, CHATs, RESOURCEs (files) and REPLYs (comments). These are distinguished by the `note_type` attribute.
+Team One defines several kinds of *note*, such as NOTEs, TASKs, CHATs, RESOURCEs (files) and REPLYs (comments). These are distinguished by the `note_type` attribute.
 
 Different types of *note* may include additional attributes.  For example, a *task* is a *note* that includes attributes for tracking to whom a task is assigned and when the task is due.
 
@@ -54,7 +54,7 @@ Different types of *note* may include additional attributes.  For example, a *ta
  - *replies* - a comment attached to the *note*, and
  - *tags* - free-text labels, keywords or categories used to organize *notes* in a type of [folksonomy](http://en.wikipedia.org/wiki/Folksonomy).
 
-(The Intellinote API and this documentation sometimes use the term "note" to refer to all *note* types generically.)
+(The Team One API and this documentation sometimes use the term "note" to refer to all *note* types generically.)
 
 ## Workspaces
 
