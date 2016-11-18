@@ -8,7 +8,7 @@ Yet many companies are saddled with on-premise contact center systems cobbled to
 
 Looking for a better solution?
 
-Welcome to BroadSoft CC-One!
+## Welcome to BroadSoft CC-One!
 
 Whether you’re a new business creating your first contact center, a medium size business looking to improve contact center operations, or a large enterprise needing visibility and control over multiple contact center sites, BroadSoft CC-One has a solution that will fit your needs.
 
