@@ -15,3 +15,5 @@ Whether you’re a new business creating your first contact center, a medium siz
 BroadSoft CC-One is truly unified contact center solution, offering not only omni-channel interactions over web, email, chat and social with your customers, but also integrated collaboration between your agents and the back office through voice, chat and video.
 
 Got an old system in place already? No worries, CC-One can gracefully migrate you to the cloud and all of its benefits, without expensive and risky "rip and replace” approach.
+
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/CCOne/images/image1.png)
