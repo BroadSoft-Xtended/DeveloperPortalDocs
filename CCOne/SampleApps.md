@@ -1,2 +1,0 @@
-# Sample Apps
-Coming Soon

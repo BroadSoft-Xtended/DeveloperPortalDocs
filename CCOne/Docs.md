@@ -16,4 +16,4 @@ BroadSoft CC-One is truly unified contact center solution, offering not only omn
 
 Got an old system in place already? No worries, CC-One can gracefully migrate you to the cloud and all of its benefits, without expensive and risky "rip and replace” approach.
 
-![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/CCOne/images/image1.png)
+![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/CCOne/images/image10.png)
