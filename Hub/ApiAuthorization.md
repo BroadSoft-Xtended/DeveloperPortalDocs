@@ -1,7 +1,5 @@
 # API Authorization
 
-# Overview
-
 Once your application is registered, you'll be able to interface with Hub. As the user takes actions in Hub, we will send you requests. You then respond to those requests with data that we show in Contextual and Notifications. We also provide a mechanism for you to send us updates to your data as they become available to the user.
 
 ## Authentication

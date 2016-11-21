@@ -1,5 +1,5 @@
-# App Registration Process
+# App Registration
 
-# Register Your App
+## Register Your App
 
-Before you can update any data within Hub, you must register your application. To do this go here https://hub-sandbox.broadsoftlabs.com/#/app/manage then log in and create apps.
+Before you can update any data within Hub, you must register your application. To do this go here https://developer.broadsoftlabs.com then log in and create apps on the make page.
