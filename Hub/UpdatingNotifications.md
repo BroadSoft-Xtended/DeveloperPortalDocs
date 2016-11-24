@@ -5,36 +5,17 @@
 When the user opens the application, we will send you the following request:
 
 ```
-POST:
-
-URL: https://<yourBaseUrl>/v1/:app/:username/notifications <private API>
-
-Post Body:
-
-{
-
-  auth: <any> (optional)
-
-}
-```
-
-OR
-
-URL: https://<baseUrl>/v1/:app/notifications <public API>
-
-This request will hit your API and you will respond with:
+POST https://<baseUrl>/v1/:app/notifications
 
 ```
-{
 
+You should respond with:
+```
+{
   count: <integer>,
-
   refreshAt: <Time in milliseconds since January 1 1970 UTC IE: 1463661591313> (optional)
-
 }
 ```
-
-If your application was registered as public, all optional parameters are not needed or will not be sent.
 
 The **count** is the count to be displayed to the user in the Hub notifications panel.
 
@@ -44,6 +25,5 @@ Example in Javascript:
 
 ```
 var refreshAt = new Date().getTime();
-
-//refreshAt = 1463661591313
+refreshAt = 1463661591313
 ```

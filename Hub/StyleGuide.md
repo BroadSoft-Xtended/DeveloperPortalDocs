@@ -1,4 +1,4 @@
-# Best Practices
+# Style Guide
 
 For a Hub app to be approved it must be submitted to the Hub UI team for approval.  While we provide developers the creative liberty to build a UI that they believe will be welcomed by their user based, we ask that you consider the Google material design as a guide as you follow the style guidelines as prescribed below.   If the UI doesn’t followed modern web standards, like Google’s Material design, then there’s a strong likelihood that the design will be pushed back for remediation.
 
