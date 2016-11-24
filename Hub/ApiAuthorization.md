@@ -16,32 +16,6 @@ Hub supports OAuth 2.0, which allows you to log the user into your application w
 
 Another example is where you may just want a custom auth token that you use to validate with Hub. This custom token can literally be any string you wish. Some sample ideas for this token could be the username, user’s email, a timestamp of the first interaction with Hub or even just a static string encrypted with a secret only your application knows. This is a less secure mechanism but it may fit your needs better depending on your application.  
 
-You can encode these tokens in any way you wish. The following examples are encrypted with base64 encoding:
-
-<table>
-  <tr>
-    <td>Properties</td>
-    <td>Un-encoded Key</td>
-    <td>Encoded Key</td>
-  </tr>
-  <tr>
-    <td>email</td>
-    <td>user@sample.com</td>
-    <td>dXNlckBzYW1wbGUuY29t</td>
-  </tr>
-  <tr>
-    <td>Email + Current Time</td>
-    <td>user@smaple.com20160808</td>
-    <td>dXNlckBzbWFwbGUuY29tMjAxNjA4MDgNCg==</td>
-  </tr>
-  <tr>
-    <td>User GUID from Database</td>
-    <td>HDD7YDHEJ7353HDHHS</td>
-    <td>SEREN1lESEVKNzM1M0hESEhT</td>
-  </tr>
-</table>
-
-
 ## How we will attempt to retrieve a custom token
 
 The following will occur if your application is set to Private upon registration and when a user tries to log in to your app from the settings page. We will open a page pointing to your server at:
