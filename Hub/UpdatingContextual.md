@@ -1,4 +1,4 @@
-# Updating Contextual Data
+# Updating Contextual
 
 When the user opens a conversation with one or many users, we will send you the following post request:
 

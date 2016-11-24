@@ -1,4 +1,4 @@
-# Sample Application Guide and Troubleshooting
+# Sample Applications
 
 There are two sample appllications on github
 
