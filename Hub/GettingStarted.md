@@ -30,7 +30,7 @@ heroku create && git push heroku master
 
 Then follow the links in the heroku output to see your application. You should see something like this where my url was https://infinite-beach-91227.herokuapp.com/
 
-<img src="https://puu.sh/ueT0s/cfbf22dc42.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://puu.sh/ueT0s/cfbf22dc42.png" alt="Drawing" style="width: 600px;"/>
 
 ### 4. Create a Hub App in the Dev Portal
 
@@ -40,7 +40,11 @@ If you don't have a Team-One account yet, don't worry, you can get one free for 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New App' button in the Hub section. Enter an application name that means something to you and the URL you got from heroku. Make sure the url is in https form.
 
-You should now see an app like this: <img src="https://puu.sh/ueTmj/a7bcd5c8ce.png" alt="Drawing" style="width: 200px;"/>. Click the app to see the app settings.
+You should now see an app like this:
+
+<img src="https://puu.sh/ueTmj/a7bcd5c8ce.png" alt="Drawing" style="width: 600px;"/>
+
+Click the app to see the app settings.
 
 ### 5. See your app in Team-One
 
@@ -51,11 +55,12 @@ Click on the 'Manage Integrations' button in the bottom left
 <img src="https://puu.sh/ueTsE/1bef11f894.png" alt="Drawing" style="width: 200px;"/>
 
 Click on 'Manage Hub Settings'
+
 <img src="https://puu.sh/ueTuI/250e4dcb16.png" alt="Drawing" style="width: 200px;"/>
 
 Once the list loads, scroll down to see your application and toggle it on.
 
-<img src="https://puu.sh/ueTEp/631675a201.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://puu.sh/ueTEp/631675a201.png" alt="Drawing" style="width: 600px;"/>
 
 Go back to https://app.intellinote.net and go to your personal workspace.
 
@@ -75,11 +80,11 @@ You can view contextual information by adding a user to your organization or tal
 
 Click on the contextual tab at the top of the user conversation
 
-<img src="https://puu.sh/ueTXm/590183895a.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://puu.sh/ueTXm/590183895a.png" alt="Drawing" style="width: 600px;"/>
 
 and see your app.
 
-<img src="https://puu.sh/ueTZi/f962e859f1.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://puu.sh/ueTZi/f962e859f1.png" alt="Drawing" style="width: 600px;"/>
 
 You will notice that there are no contextual items that show up. That is because the code calls the app 'HelloWorld' and you named it something different. For me, I would have to replace all instances of 'helloWorld' in app.js with 'testjonnn'
 
