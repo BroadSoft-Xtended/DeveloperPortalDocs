@@ -42,9 +42,9 @@ Go to https://app.intellinote.net/
 
 Search for the bot user you created by name.
 
-<img src="https://puu.sh/ugmDk/6de8156a19.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://puu.sh/ugmDk/6de8156a19.png" alt="Drawing" style="width: 200px;"/>
 
-<img src="https://puu.sh/ugmFI/8bba0cfa3e.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://puu.sh/ugmFI/8bba0cfa3e.png" alt="Drawing" style="width: 300px;"/>
 
 Say '/math' to the bot.
 
