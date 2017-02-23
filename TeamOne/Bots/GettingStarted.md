@@ -16,11 +16,11 @@ If you don't have a Team-One account yet, don't worry, you can get one free for 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New Bot' button in the Team-One section. Enter a bot first name and last name and select the organization you recognize from the drop down. Then click 'Create Bot'.
 
-![](https://puu.sh/ugmiU/38e8f24701.png)
+<img src="https://puu.sh/ugmiU/38e8f24701.png" alt="Drawing" style="width: 300px;"/>
 
 You should now see an bot like this:
 
-![](https://puu.sh/ugmB9/636593da25.png)
+<img src="https://puu.sh/ugmB9/636593da25.png" alt="Drawing" style="width: 600px;"/>
 
 ### 2. Run the sample code
 
@@ -34,7 +34,7 @@ KEY=<yourApiKey> ORG_ID=<yourOrgId> node app.js
 
 You should now see something like this:
 
-![](https://puu.sh/ugmsw/61f2996c74.png)
+<img src="https://puu.sh/ugmsw/61f2996c74.png" alt="Drawing" style="width: 600px;"/>
 
 ### 3. Talk to your bot in Team-One
 
@@ -42,17 +42,17 @@ Go to https://app.intellinote.net/
 
 Search for the bot user you created by name.
 
-![](https://puu.sh/ugmDk/6de8156a19.png)
+<img src="https://puu.sh/ugmDk/6de8156a19.png" alt="Drawing" style="width: 600px;"/>
 
-![](https://puu.sh/ugmFI/8bba0cfa3e.png)
+<img src="https://puu.sh/ugmFI/8bba0cfa3e.png" alt="Drawing" style="width: 600px;"/>
 
 Say '/math' to the bot.
 
-![](https://puu.sh/ugmLx/7d870138a6.png)
+<img src="https://puu.sh/ugmLx/7d870138a6.png" alt="Drawing" style="width: 600px;"/>
 
 Your bot is now working.
 
-![](https://puu.sh/ugnVw/f614affa60.png)
+<img src="https://puu.sh/ugnVw/f614affa60.png" alt="Drawing" style="width: 600px;"/>
 
 ## Its not working for me.
 
