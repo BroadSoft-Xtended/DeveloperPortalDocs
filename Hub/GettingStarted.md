@@ -11,15 +11,15 @@ For more info, see the overview section of these docs.
 
 ## Steps
 
-1. Clone our sample apps repository.
+### 1. Clone our sample apps repository.
 
 `git clone https://github.com/BroadSoft-Xtended/sample-apps.git`
 
-2. Navigate to the project you want to test out.
+### 2. Navigate to the project you want to test out.
 
 `cd sample-apps/hub/simple`
 
-3. Push this code to heroku to host it for testing
+### 3. Push this code to heroku to host it for testing
 
 ```
 rm -rf .git
@@ -28,9 +28,11 @@ git init && git add . && git commit -am 'my first commit'
 heroku create && git push heroku master
 ```
 
-Then follow the links in the heroku output to see your application. You should see something like this: ![](https://puu.sh/ueT0s/cfbf22dc42.png) where my url was https://infinite-beach-91227.herokuapp.com/
+Then follow the links in the heroku output to see your application. You should see something like this where my url was https://infinite-beach-91227.herokuapp.com/
 
-4. Create a Hub App in the Dev Portal
+![](https://puu.sh/ueT0s/cfbf22dc42.png =250x)
+
+### 4. Create a Hub App in the Dev Portal
 
 Go here and log in. https://developer.broadsoftlabs.com/#/app/login
 
@@ -38,27 +40,45 @@ If you don't have a Team-One account yet, don't worry, you can get one free for 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New App' button in the Hub section. Enter an application name that means something to you and the URL you got from heroku. Make sure the url is in https form.
 
-You should now see an app like this: ![](https://puu.sh/ueTmj/a7bcd5c8ce.png). Click the app to see the app settings.
+You should now see an app like this: ![](https://puu.sh/ueTmj/a7bcd5c8ce.png =250x). Click the app to see the app settings.
 
-5. See your app in Team-One
+### 5. See your app in Team-One
 
 Go to https://app.intellinote.net/
 
-Click on the 'Manage Integrations' button in the bottom left ![](https://puu.sh/ueTsE/1bef11f894.png)
+Click on the 'Manage Integrations' button in the bottom left
 
-Click on 'Manage Hub Settings' ![](https://puu.sh/ueTuI/250e4dcb16.png)
+![](https://puu.sh/ueTsE/1bef11f894.png =250x)
 
-Once the list loads, scroll down to see your application and toggle it on. ![](https://puu.sh/ueTEp/631675a201.png)
+Click on 'Manage Hub Settings' ![](https://puu.sh/ueTuI/250e4dcb16.png =250x)
 
-Go back to https://app.intellinote.net and go to your personal workspace. ![](https://puu.sh/ueTPE/9c843f435a.png)
+Once the list loads, scroll down to see your application and toggle it on.
 
-Click your app: ![](https://puu.sh/ueTRd/1939daffdd.png) and see it in action! ![](https://puu.sh/ueTSl/55f8430417.png)
+![](https://puu.sh/ueTEp/631675a201.png =250x)
+
+Go back to https://app.intellinote.net and go to your personal workspace.
+
+![](https://puu.sh/ueTPE/9c843f435a.png =250x)
+
+Click your app:
+
+![](https://puu.sh/ueTRd/1939daffdd.png =250x)
+
+and see it in action!
+
+![](https://puu.sh/ueTSl/55f8430417.png =250x)
 
 You can view contextual information by adding a user to your organization or talking to an existing user.
 
-6. Get contextual working
+### 6. Get contextual working
 
-Click on the contextual tab at the top of the user conversation ![](https://puu.sh/ueTXm/590183895a.png) and see your app. ![](https://puu.sh/ueTZi/f962e859f1.png)
+Click on the contextual tab at the top of the user conversation
+
+![](https://puu.sh/ueTXm/590183895a.png =250x)
+
+and see your app.
+
+![](https://puu.sh/ueTZi/f962e859f1.png =250x)
 
 You will notice that there are no contextual items that show up. That is because the code calls the app 'HelloWorld' and you named it something different. For me, I would have to replace all instances of 'helloWorld' in app.js with 'testjonnn'
 
