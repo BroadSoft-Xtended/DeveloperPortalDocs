@@ -8,7 +8,7 @@ This will get you going with the most basic Team-One bot. These instructions are
 
 ## Steps
 
-1. Create a bot in the Dev Portal
+### 1. Create a bot in the Dev Portal
 
 Go here and log in. https://developer.broadsoftlabs.com/#/app/login
 
@@ -18,9 +18,11 @@ Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/
 
 ![](https://puu.sh/ugmiU/38e8f24701.png)
 
-You should now see an bot like this: ![](https://puu.sh/ugmB9/636593da25.png).
+You should now see an bot like this:
 
-2. Run the sample code
+![](https://puu.sh/ugmB9/636593da25.png)
+
+### 2. Run the sample code
 
 ```
 git clone https://github.com/BroadSoft-Xtended/sample-apps.git
@@ -34,11 +36,13 @@ You should now see something like this:
 
 ![](https://puu.sh/ugmsw/61f2996c74.png)
 
-3. Talk to your bot Team-One
+### 3. Talk to your bot in Team-One
 
 Go to https://app.intellinote.net/
 
-Search for the bot user you created by name. ![](https://puu.sh/ugmDk/6de8156a19.png)
+Search for the bot user you created by name.
+
+![](https://puu.sh/ugmDk/6de8156a19.png)
 
 ![](https://puu.sh/ugmFI/8bba0cfa3e.png)
 
