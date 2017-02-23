@@ -1,11 +1,3 @@
-# Sample Applications
+# Sample Apps
 
-There are two sample appllications on github
-
-Hello World Simple (Public app flag)
-https://github.com/BroadsoftLabs/helloWorldHubSimple
-
-Hello World Advanced (Private app flag)
-https://github.com/BroadsoftLabs/helloWorldAdvanced
-
-**Please see the Readme file in those projects for more details**
+Please check out our sample apps on github: https://github.com/BroadSoft-Xtended/sample-apps/tree/master/hub/advanced and https://github.com/BroadSoft-Xtended/sample-apps/tree/master/hub/simple

@@ -1,6 +1,6 @@
 # CC-One Docs
 
-## CONTACT CENTER SOLUTIONS FOR EVERY BUSINESS
+## CONTACT CENTRE SOLUTIONS FOR EVERY BUSINESS
 
 The role of the contact center is changing, from cost center to strategic corporate asset. While focusing on cost reductions made sense a decade ago, today it’s all about agent productivity and maximizing sales and service business outcomes – in addition to operational efficiency.
 
