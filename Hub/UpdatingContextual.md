@@ -76,3 +76,129 @@ https://
 <baseurl>/v1/:app/:username/timeline/:timelineId/:property</baseurl>
 
 With the toggled value of the property in the body of the request.
+
+# Using custom actions
+
+Your timeline is the list of contextual items you want to display. It shoudl look something like this:
+
+```
+var timeline = {
+    items: [{
+      date: new Date(),
+      title: 'My test record',
+      id: 0,
+      description: 'My description: user emails you are talking to:' + emails,
+      webLink: 'https://www.google.com',
+      actions: [{
+        "property": "isRead",
+        "title": "Mark as read",
+        "titleActive": "Mark as unread",
+        "iconClass": "email-read",
+        "iconClassActive": "email",
+        "type": "toggle"
+
+      }, {
+        "property": "deleted",
+        "title": "Delete",
+        "iconClass": "trash",
+        "type": "toggle"
+      }, {
+        "property": "saveItem", //calls a route nammed saveItem with Id of record
+        "type": "list",
+
+        "list": {
+          "mode": "toggle",
+          "iconClass": "teamOne-saved",
+          "title": "Save email to Team-One",
+          "header": "Save to Team-One Workspace",
+          "value": false,
+          "loadItems": {
+            "path": "getList",
+            "method": "POST",
+            "params": {
+              "limit": 10
+            }
+          },
+          "searchVisible": true,
+          "refreshOnSelect": true
+        }
+      }, {
+        "property": "launchInBrowser",
+        "title": "Launch In Browser",
+        "type": "link",
+        "iconClass": "externallink",
+        "url": "https://mail.google.com/mail/?#all/158b6503827f71c2"
+
+      }]
+    }]
+  };
+```
+
+There are three type of contextual actions that we support in the actions seciton:
+
+## type="link"
+
+These actions show a deault link icon for your record and simply link the user to the website you specify.
+
+```
+      {
+        "property": "launchInBrowser",
+        "title": "Launch In Browser",
+        "type": "link",
+        "iconClass": "externallink",
+        "url": "https://mail.google.com/mail/?#all/158b6503827f71c2"
+      }
+```
+
+## type="toggle"
+
+The toggle route can be much more complex.
+
+```
+      {
+        "property": "isRead",
+        "title": "Mark as read",
+        "titleActive": "Mark as unread",
+        "iconClass": "email-read",
+        "iconClassActive": "email",
+        "type": "toggle"
+      }
+```
+
+### property
+
+This is the route your app will be called with at `/v1/:appName/isRead` This will also send you the Id of the record you specified in the timeline item so you can perform any action you like on that item.
+
+### iconClassActive/iconClass
+
+These are the classes we will show for your icon based on what you return from the property route we call
+
+## type="list"
+
+A list can show the user a searchable list of items that the user can click on.
+
+```
+      {
+        "property": "saveItem", //calls a route nammed saveItem with Id of record
+        "type": "list",
+        "list": {
+          "mode": "toggle",
+          "iconClass": "teamOne-saved",
+          "title": "Save email to Team-One",
+          "header": "Save to Team-One Workspace",
+          "value": false,
+          "loadItems": {
+            "path": "getList",
+            "method": "POST",
+            "params": {
+              "limit": 10
+            }
+          },
+          "searchVisible": true,
+          "refreshOnSelect": true
+        }
+      }
+```
+
+
+
