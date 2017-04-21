@@ -15,4 +15,4 @@ db.dropDatabase();
 
 ## Step 2 Populate DB
 
-Do a get request to : https://markdown-converter.broadsoftlabs.com/initDatabase/BroadsoftLabs/BroadsoftExternalDocs
+Do a get request to : https://markdown-converter.broadsoftlabs.com/initDatabase/joncodo/Docs
