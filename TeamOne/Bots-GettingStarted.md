@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started with Bots
 
 This will get you going with the most basic Team-One bot. These instructions are for MacOS. You will need brew installed if you don't have all the required dependencies. `https://brew.sh/`. In this example, we will be building an app in [Node.js](https://nodejs.org/en/). We will be hosting it on locally for testing.
 

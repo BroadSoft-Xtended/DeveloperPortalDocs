@@ -1,4 +1,6 @@
-## Obtain an access token.
+# Getting Started with Bots
+
+## Step 0 - Obtain an access token.
 
 In order to use the RTM API you will need a Team-One API "access token".
 

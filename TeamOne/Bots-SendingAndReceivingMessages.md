@@ -1,4 +1,6 @@
-## Step 2. Send and receive RTM API messages.
+# Getting Started with Bots
+
+## Step 2 - Send and receive RTM API messages.
 
 To use the RTM API your application will send and receive JSON documents over this websocket connection.
 

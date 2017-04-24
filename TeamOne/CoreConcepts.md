@@ -1,12 +1,8 @@
----
-Core Concepts
+# Core Concepts in the Team-One Apis
+
 A brief overview of the primary objects or "resources" within&nbsp;Team One.
-
 This document is *not* a data-dictionary nor a comprehensive technical reference.
-
 It *is* an introduction to some of the core concepts you'll encounter within the Team One API, intended to help you better understand and navigate the Team One framework.
----
-
 
 <p><i style="color:#666">Relationships between several core entities within Team One.</i></p>
 </div>

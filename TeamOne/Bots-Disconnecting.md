@@ -1,4 +1,6 @@
-## Step 3. Disconnect
+# Getting Started with Bots
+
+## Step 3 - Disconnect
 
 When you are done, you may send a `goodbye` payload in order to gracefully close your session (effectively "logging out" of the RTM API).
 

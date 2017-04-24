@@ -1,3 +1,5 @@
+# Getting Started with Bots
+
 ## Step 1. Connect to the RTM API.
 
 The Real-Time-Messaging API is a [websocket](https://en.wikipedia.org/wiki/WebSocket)-based API.

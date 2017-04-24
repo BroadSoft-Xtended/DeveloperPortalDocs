@@ -1,4 +1,6 @@
-# How to use the Team-One RTM API
+# Getting Started with Bots
+
+## How to use the Team-One RTM API
 
 <div style="border-bottom:1px solid #ddd; margin-top:-0.4em; margin-bottom:1em; padding-bottom: 1.4em">
   <div style="float:right;text-align:right;font-size:80%;max-width:33%;">
