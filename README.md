@@ -1,8 +1,8 @@
-# BroadsoftExternalDocs
+# Developer Portal Docs
 
-Hosted on heroku
+You can edit these docs with a pull request. This can be done by [editing the files directly](https://help.github.com/articles/editing-files-in-your-repository/) in github. Create a [pull request](https://help.github.com/articles/creating-a-pull-request/) this way and I will review and merge it.
 
-How to update this:
+Updating the docs database.
 
 ## Step 1 Clear the database
 
