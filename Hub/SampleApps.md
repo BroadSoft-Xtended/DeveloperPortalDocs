@@ -2,10 +2,10 @@
 
 Please check out our sample apps on github:
 
-## https://github.com/BroadSoft-Xtended/sample-apps/tree/master/hub/advanced 
+## https://github.com/BroadSoft-Xtended/SampleApps/tree/master/hub/advanced 
 
 and
 
-## https://github.com/BroadSoft-Xtended/sample-apps/tree/master/hub/simple
+## https://github.com/BroadSoft-Xtended/SampleApps/tree/master/hub/simple
 
 **Please see the Readme file in those projects for more details**
