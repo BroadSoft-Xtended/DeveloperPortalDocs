@@ -2,10 +2,4 @@
 
 Please check out our sample apps on github:
 
-## https://github.com/intellinote/sample-code
-
-and
-
-## https://github.com/BroadSoft-Xtended/sample-apps/tree/master/teamone/TeamOne-MathBot
-
-**Please see the Readme file in those projects for more details**
+[Advanced Bots](https://github.com/intellinote/sample-code) and [Simple Bots](https://github.com/BroadSoft-Xtended/SampleApps/tree/master/teamone/TeamOne-MathBot)
