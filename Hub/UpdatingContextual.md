@@ -26,13 +26,13 @@ This request will hit your API and you will respond with:
        date: <Time since Jan 1 1970 UTC>,
        title: <string> (first row),
        description: <string> (optional)
-       timelineId: <string> (unique id that represents the record),
-       webLink: <string> (open in browser url),
+       id: <string> (unique id that represents the record),
+       url: <string> (open in browser url),
        actions: [
         {
           property: <string> (name of the boolean property of the timeline item),
           iconClass: <string> (name of the icon to be displayed through HubIconFont’s provided css classes),
-          Color: <string> (css color of the activated action)
+          color: <string> (css color of the activated action)
         }
       ] (optional)
      },
@@ -61,25 +61,21 @@ Timeline is the list of data that you want displayed in contextual. This is an a
 
 - Title is the first bolded row of the contextual record
 
-- Sub title is the optional second row of the contextual record
-
 - Description is the one to three lines of details that you may provide for each timeline item.
 
 - Timeline Id is a unique id in your system that represents the timeline item.
 
-- WebLink is the url the link that is made available so a user can click your timeline item.
+- Url is the url the link that is made available so a user can click your timeline item.
 
 - Actions are icons that you want shown as the user hovers over your contextual item. By specifying them in the actions property of the timeline response you can toggle a boolean property of your timeline items. On clicking the icon we will send a PUT request to
 
-https://
-
-<baseurl>/:app/:username/timeline/:timelineId/:property</baseurl>
+https://<hubBaseUrl>/:appName/timeline/:timelineId/:property
 
 With the toggled value of the property in the body of the request.
 
 # Using custom actions
 
-Your timeline is the list of contextual items you want to display. It shoudl look something like this:
+Your timeline is the list of contextual items you want to display. It should look something like this:
 
 ```
 var timeline = {
@@ -88,7 +84,7 @@ var timeline = {
       title: 'My test record',
       id: 0,
       description: 'My description: user emails you are talking to:' + emails,
-      webLink: 'https://www.google.com',
+      url: 'https://www.google.com',
       actions: [{
         "property": "isRead",
         "title": "Mark as read",
@@ -199,6 +195,3 @@ A list can show the user a searchable list of items that the user can click on.
         }
       }
 ```
-
-
-

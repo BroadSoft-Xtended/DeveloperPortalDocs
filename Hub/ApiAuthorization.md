@@ -23,8 +23,10 @@ The following will occur if your application is set to Private upon registration
 ```
 GET
 
-URL: https://<yourBaseUrl>/{yourAppName}/authenticate?hubUrl=https://core.broadsoftlabs.com
+URL: https://<yourBaseUrl>/<yourAppName>/authenticate?hubUrl=<theUrlWhereHubIsHosted>&hubLoginToken=<theHubLoginTokenForUser>
 ```
+
+You will need to associate this token with a user in your database. This is because hub will send that token back to you on each request. You will need to match the hubLoginToken to a user to know which user hub is requesting data for.
 
 Then you can render your login page or any OAuth integration with other providers in at that time.
 Upon successful login, you will send us the encrypted authentication token as a POST
@@ -32,11 +34,34 @@ Upon successful login, you will send us the encrypted authentication token as a 
 ```
 POST
 
-URL: https://<hubUrl>/{yourAppName}/:username/auth
+URL: https://<hubUrl>/<yourAppName>/:username/auth
 
 Post Body: {
   auth: 'my custom auth string'
 }
+```
+
+After this POST returns a success message, you will need to redirect the user to the Hub success page.
+
+```
+  var options = {
+    method: 'POST',
+    uri: 'https://core.broadsoftlabs.com/v1/' + req.session.appName + '/jodonnell@broadsoft.com/auth',
+    body: {
+      hubLoginToken: req.session.hubLoginToken,
+      auth: 'jodonnell@broadsoft.com'
+    },
+    json: true
+  };
+
+  // Once you successfully send that request off to hub, you have to redirect the user to the url that hub tells you
+  // This will show the user the Hub login success page.
+  rp(options).then(function(result) {
+    res.redirect(result.url);
+  }).catch(function(error) {
+    console.log('Could not post to hub', error.message);
+    res.send(500, error);
+  })
 ```
 
 Hub will store this token and associate with your application and a user. Then this token will be sent with all Hub requests.

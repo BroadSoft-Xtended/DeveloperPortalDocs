@@ -7,5 +7,5 @@ Please send us the following POST request:
 ```
 POST
 
-URL: https://core.broadsoftlabs.com/:app/:username/push
+URL: https://<hubBaseUrl>/:appName/:username/push
 ```
