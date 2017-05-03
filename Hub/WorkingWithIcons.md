@@ -5,7 +5,7 @@
                                 "titlePopup": " (Access)",
                                 "date": "2016-10-17T08:22:22.000Z",
                                 "snippet": "<font size=1><i>jodonnell@broadsoft.com</i> found in <i>Access</i></font>",
-                                "url": "https://localhost.mondago.net:21083/Access/v1/doaction?cmd=showcontact&id=776",
+                                "url": "https://localhost.mondago.net:21083/Access/doaction?cmd=showcontact&id=776",
                                 "actions": [{
                                                 "property": "delete",
                                                 "title": "Delete",

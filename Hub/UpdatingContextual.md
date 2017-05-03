@@ -5,7 +5,7 @@ When the user opens a conversation with one or many users, we will send you the 
 ![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image12.png)
 
 ```
-POST https://<yourBaseUrl>/v1/:app/timeline
+POST https://<yourBaseUrl>/:app/timeline
 
 {
   auth: <any> (optional),
@@ -73,7 +73,7 @@ Timeline is the list of data that you want displayed in contextual. This is an a
 
 https://
 
-<baseurl>/v1/:app/:username/timeline/:timelineId/:property</baseurl>
+<baseurl>/:app/:username/timeline/:timelineId/:property</baseurl>
 
 With the toggled value of the property in the body of the request.
 
@@ -167,7 +167,7 @@ The toggle route can be much more complex.
 
 ### property
 
-This is the route your app will be called with at `/v1/:appName/isRead` This will also send you the Id of the record you specified in the timeline item so you can perform any action you like on that item.
+This is the route your app will be called with at `/:appName/isRead` This will also send you the Id of the record you specified in the timeline item so you can perform any action you like on that item.
 
 ### iconClassActive/iconClass
 

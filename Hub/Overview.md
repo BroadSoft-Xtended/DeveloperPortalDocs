@@ -10,9 +10,7 @@ Hub is a part of several products at Broadsoft. (Team-One, CC-One, UC-One) Hub p
 
 To do this, Hub apps have three different areas where data can be delivered: the MicroApp panel, the Notification bar, and the Contextual panel.   
 
-Below is an illustration of how the three components of Hub (Notifications, Contextual, MicroApp) integrate into the UC-One Chrome experience.
-
-![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image1.png)
+Below is an illustration of how Hub is displayed in Team-One. Anyone can get a free trial Team-One account. Email us at jodonnell@broadsoft.com if you need your free trial extended.
 
 ## Notifications
 

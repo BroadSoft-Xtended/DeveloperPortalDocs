@@ -13,11 +13,11 @@ For more info, see the overview section of these docs.
 
 ### 1. Clone our sample apps repository.
 
-`git clone https://github.com/BroadSoft-Xtended/sample-apps.git`
+`git clone https://github.com/BroadSoft-Xtended/SampleApps.git`
 
 ### 2. Navigate to the project you want to test out.
 
-`cd sample-apps/hub/simple`
+`IE: cd SampleApps/hub/public-data`
 
 ### 3. Push this code to heroku to host it for testing
 

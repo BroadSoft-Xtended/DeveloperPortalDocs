@@ -23,20 +23,19 @@ The following will occur if your application is set to Private upon registration
 ```
 GET
 
-URL: https://<yourBaseUrl>/v1/{yourAppName}/authenticate?hubUrl=[https://core.broadsoftlabs.com](https://core.broadsoftlabs.com)
+URL: https://<yourBaseUrl>/{yourAppName}/authenticate?hubUrl=https://core.broadsoftlabs.com
+```
 
-and you can render your login page or any OAuth integration with other providers in at that time.
-
+Then you can render your login page or any OAuth integration with other providers in at that time.
 Upon successful login, you will send us the encrypted authentication token as a POST
 
+```
 POST
 
-URL: https://<hubUrl>/v1/{yourAppName}/:username/auth
+URL: https://<hubUrl>/{yourAppName}/:username/auth
 
 Post Body: {
-
-  auth: <any>
-
+  auth: 'my custom auth string'
 }
 ```
 

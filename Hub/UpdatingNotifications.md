@@ -5,7 +5,7 @@
 When the user opens the application, we will send you the following request:
 
 ```
-POST https://<baseUrl>/v1/:app/notifications
+POST https://<baseUrl>/:app/notifications
 
 ```
 
