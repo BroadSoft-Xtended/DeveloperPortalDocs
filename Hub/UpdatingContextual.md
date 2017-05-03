@@ -23,7 +23,7 @@ This request will hit your API and you will respond with:
   items:
     [
      {
-       date: <Time since Jan 1 1970 UTC>,
+       date: <an integer of ms since 1970>,
        title: <string> (first row),
        description: <string> (optional)
        id: <string> (unique id that represents the record),
@@ -80,7 +80,7 @@ Your timeline is the list of contextual items you want to display. It should loo
 ```
 var timeline = {
     items: [{
-      date: new Date(),
+      date: <an integer of ms since 1970>,
       title: 'My test record',
       id: 0,
       description: 'My description: user emails you are talking to:' + emails,
