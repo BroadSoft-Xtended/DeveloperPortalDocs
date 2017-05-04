@@ -17,7 +17,7 @@ For more info, see the overview section of these docs.
 
 ### 2. Navigate to the project you want to test out.
 
-`IE: cd SampleApps/hub/public-data`
+`IE: cd SampleApps/Hub/HelloWorld`
 
 ### 3. Push this code to heroku to host it for testing
 
