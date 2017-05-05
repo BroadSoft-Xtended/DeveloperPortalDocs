@@ -80,7 +80,7 @@ HTTP/1.1 302 Found
 Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
 ```
 
-The end-user will be presented with a form by which she can authorize
+The end-user will be presented with a form by which they can authorize
 your application to access her Team One account. (Or more
 specifically, access the Team One *scopes* enumerated in the query
 string.)
@@ -311,8 +311,8 @@ HTTP/1.1 302 Found
 Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
 ```
 
-The end-user must authenticate and (if she hasn't done this already)
-is presented with a form by which she can authorize
+The end-user must authenticate and (if they havn't done this already)
+is presented with a form by which they can authorize
 your application to access her Team One account. (Or more
 specifically, access the Team One *scopes* enumerated in the query
 string.)
