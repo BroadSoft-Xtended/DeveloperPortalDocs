@@ -130,9 +130,9 @@ attributes:
 
 ```javascript
 var request = require("request"); // https://www.npmjs.org/package/request
-var headers = { "Content-Type": "{content_type}" };
-var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
-var payload = '{payload|s}';
+var headers = { "Content-Type": "application/json" };
+var url     = "https://app.intellinote.net/rest/auth/oauth2/access";
+var payload = '{"code":"h4iu8zs29zy9cnmi840ub5bete3o9a4i","client_id":"lsJLcwxUyll0p","client_secret":"MkalkvoRGBZP1O","grant_type":"authorization_code"}';
 
 console.log("REQUEST: POST "+ url);
 request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
@@ -205,9 +205,9 @@ attributes:
 
 ```javascript
 var request = require("request"); // https://www.npmjs.org/package/request
-var headers = { "Content-Type": "{content_type}" };
-var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
-var payload = '{payload|s}';
+var headers = { "Content-Type": "application/json" };
+var url     = "https://app.intellinote.net/rest/auth/oauth2/access";
+var payload = '{"token":"a29cf572ccdb7924d2c35ca95753f233","client_id":"lsJLcwxUyll0p","client_secret":"MkalkvoRGBZP1O","grant_type":"refresh_token"}';
 
 console.log("REQUEST: POST "+ url);
 request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
@@ -293,14 +293,14 @@ For example, let's assume that:
 Your application must then direct the user to the URL:
 
 ```no-highlight
-https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
+https://app.intellinote.net/rest/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback
 ```
 
 For example, you might provide the user with a direct link in your
 HTML code:
 
 ```html
-<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Team One Account</a>
+<a href="https://app.intellinote.net/rest/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback">Link to Team-One Account</a>
 ```
 
 or your server might redirect the user to Team One by returning a
@@ -308,7 +308,7 @@ HTTP 302 response:
 
 ```http
 HTTP/1.1 302 Found
-Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
+Location: https://app.intellinote.net/rest/auth/oauth2/authorization?response_type=token&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback
 ```
 
 The end-user must authenticate and (if they havn't done this already)
@@ -356,9 +356,9 @@ attributes:
 
 ```javascript
 var request = require("request"); // https://www.npmjs.org/package/request
-var headers = { "Content-Type": "{content_type}" };
-var url     = "https://{request.url.hostname}{@uri path="{path|s}"/}";
-var payload = '{payload|s}';
+var headers = { "Content-Type": "application/json" };
+var url     = "https://app.intellinote.net/rest/auth/oauth2/access";
+var payload = '{"client_id":"lsJLcwxUyll0p","client_secret":"MkalkvoRGBZP1O","grant_type":"client_credentials"}';
 
 console.log("REQUEST: POST "+ url);
 request.post( url, {body:payload,headers:headers,json:true}, function(err,response,body) {
@@ -409,10 +409,10 @@ With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP
 
 ```javascript
 var request      = require("request"); // https://www.npmjs.org/package/request
-var access_token = "{access_token}";
+var access_token = "9m74lrwlcubu766rbmkqp2srche8w7b9";
 var headers      = { Authorization: "Bearer " + access_token };
-var url          = "https://{request.url.hostname}" +
-                   "{@uri path="{path|s}"/}";
+var url          = "https://app.intellinote.net" +
+                   "/rest/v2.0/orgs";
 
 console.log("REQUEST: GET "+ url);
 request.get( url, {headers:headers,json:true}, function(err,response,body) {
@@ -457,10 +457,10 @@ With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP
 
 ```javascript
 var request      = require("request"); // https://www.npmjs.org/package/request
-var access_token = "{access_token}";
+var access_token = "9m74lrwlcubu766rbmkqp2srche8w7b9";
 var headers      = { Authorization: "Bearer " + access_token };
-var url          = "https://{request.url.hostname}" +
-                   "{@uri path="{path|s}"/}";
+var url          = "https://app.intellinote.net" +
+                   "/rest/v2.0/orgs/251/workspaces";
 
 console.log("REQUEST: GET "+ url);
 request.get( url, {headers:headers,json:true}, function(err,response,body) {
@@ -511,10 +511,10 @@ The request may contain one of several query-string parameters that filter or ot
 
 ```javascript
 var request      = require("request"); // https://www.npmjs.org/package/request
-var access_token = "{access_token}";
+var access_token = "9m74lrwlcubu766rbmkqp2srche8w7b9";
 var headers      = { Authorization: "Bearer " + access_token };
-var url          = "https://{request.url.hostname}" +
-                   "{@uri path="{path|s}"/}";
+var url          = "https://app.intellinote.net" +
+                   "/rest/v2.0/orgs/251/workspace/1143/notes?note_type=NOTE";
 
 console.log("REQUEST: GET "+ url);
 request.get( url, {headers:headers,json:true}, function(err,response,body) {
@@ -601,10 +601,10 @@ The request may contain one of several query-string parameters that filter or ot
 
 ```javascript
 var request      = require("request"); // https://www.npmjs.org/package/request
-var access_token = "{access_token}";
+var access_token = "9m74lrwlcubu766rbmkqp2srche8w7b9";
 var headers      = { Authorization: "Bearer " + access_token };
-var url          = "https://{request.url.hostname}" +
-                   "{@uri path="{path|s}"/}";
+var url          = "https://app.intellinote.net" +
+                   "/rest/v2.0/orgs/251/workspace/1143/notes?note_type=TASK&complete=false&assignee=user525";
 
 console.log("REQUEST: GET "+ url);
 request.get( url, {headers:headers,json:true}, function(err,response,body) {
