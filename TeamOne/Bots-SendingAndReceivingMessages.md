@@ -4,9 +4,9 @@
 
 To use the RTM API your application will send and receive JSON documents over this websocket connection.
 
-#### Chat Events
+# Chat Events
 
-##### Sending Chat Messages
+## Sending Chat Messages
 
 
 To post a chat message to a workspace (or one-on-one chat), you may submit a payload like the following:
@@ -65,11 +65,11 @@ For compatibility with Slack, the following redundant attribute is also included
 
 If an error occurs, you'll get back an [error response](#error-handling) instead.
 
-##### Receiving Chat Messages
+## Receiving Chat Messages
 
 By default, your client will be notified (receive a payload) whenever a chat message is added, changed or deleted within one of the workspaces you have access to.
 
-###### Chat Message Added
+## Chat Message Added
 
 When a chat message is posted to a workspace your client has access to, you'll receive a payload like the following:
 
@@ -118,7 +118,7 @@ For compatibility with the popular messaging service Slack, the following redund
   * `channel` contains `<org-id>/<workspace-id>` and uniquely identifies the workspace (or one-on-one chat) in which the message was posted.
   * `ts` contains `<note-id>` and uniquely identifies this specific chat message.
 
-###### Chat Message Changed
+## Chat Message Changed
 
 When a chat message in a workspace your client has access to is edited, you'll receive a payload like the following:
 
@@ -187,7 +187,7 @@ Where
   * `message` contains a description of message _after_ the change was applied.
   * `previous_message` contains a description of the chat message just _before_ the change was applied.
 
-###### Chat Message Deleted
+## Chat Message Deleted
 
 When a chat message is removed from a workspace your client has access to, you'll receive a payload like the following:
 
@@ -236,9 +236,9 @@ Where
   * `hidden` is `true`, as it is for the `message_changed` case.
   * `previous_message` contains a description of the chat message just before it was removed.
 
-#### Typing Events
+# Typing Events
 
-##### Sending Typing Events
+## Sending Typing Events
 
 To communicate that the user is currently typing, you may send a payload like this:
 
@@ -263,7 +263,7 @@ Or, for compatibility with Slack, you may use this alternative form:
 
 where `channel` is simply `<org-id>/<workspace-id>`.
 
-##### Receiving Typing Events
+## Receiving Typing Events
 
 When *another* user is typing, you'll receive a payload like this:
 
@@ -285,13 +285,13 @@ Where:
 
 For compatibility with Slack, once again the redundant attribute `channel` is sent, containing `<org-id>/<workspace-id>`.
 
-#### Note Events
+# Note Events
 
-##### Sending Notes
+## Sending Notes
 
 To create, modify or delete a note (of any type&mdash;including NOTE, TASK, RESOURCE (file), etc.), you may use [REST API tunneling](#rest-api-tunneling) or interact with the REST API directly.  There is no note equivalent of the `message` request payload.
 
-##### Receiving Notes
+## Receiving Notes
 
 When a "note"  (of any type&mdash;including NOTE, TASK, RESOURCE (file), etc.), that the user can access is created, modified or deleted a `note` event is transmitted.
 
@@ -303,7 +303,7 @@ Examples of these events are listed below.
 
 > NOTE: *Currently "draft"-status notes are not published via the RTM or webhook interface.  Creating, editing or deleting a draft note is invisible to clients. When a note changes from draft to published, it appears as a "note_added" event to clients. When a note changes from published to draft (private) it appears as a "note_deleted" event to clients (even those associated with the owner of the now-private note).(However, the [REST-tunneling methods](#rest-api-tunneling) will report on and modify draft notes if the proper parameters are set.*
 
-###### Note Added
+## Note Added
 
 When a note (of any type) is added to a workspace the client has access to, you'll receive a payload like the following:
 
@@ -368,7 +368,7 @@ Where:
 
  For compatibility with Slack, once again the redundant attribute `channel` is sent, containing `<org-id>/<workspace-id>` and a `type` attribute (equal to `note`) is included.
 
-###### Note Changed
+## Note Changed
 
 When a note (that the client has access to) is _modified_, a `note_changed` event like the following is transmitted:
 
@@ -474,7 +474,7 @@ Where:
   * `subtype`, which will be `note_changed`
   * `hidden`, which will be `true`
 
-###### Note Deleted
+## Note Deleted
 
 When a note (that the client has access to) is _removed_, a `note_deleted` event like the following is transmitted:
 
@@ -542,9 +542,9 @@ Where:
   * `subtype`, which will be `note_deleted`
   * `hidden`, which will be `true`
 
-#### REST API Tunneling
+# REST API Tunnelling
 
-You may submit arbitrary requests to the Team-One REST API via the websocket connection.
+You may submit arbitrary requests to the Team-One REST API via the websocket connection. You can test this out by using the swagger API endpoint here: https://developer.broadsoftlabs.com/#/app/swagger.
 
 To submit a REST API request, send a payload such as:
 
@@ -583,7 +583,7 @@ Where:
   * `status` is the HTTP status code of the response.
   * `body` contains the response body (if any)
 
-#### Ping/Pong
+## Ping/Pong
 
 To keep the connection alive or just to test it, you may send a "ping" payload, like this:
 
@@ -623,7 +623,7 @@ which you could then use to measure the latency between client and server.
 
 Note that a payload comprised of a blank (empty) string will also be interpreted as a `ping` payload.
 
-#### Error Handling
+# Error Handling
 
 When an error occurs you'll get back a payload like the following:
 

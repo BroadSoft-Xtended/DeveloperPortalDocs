@@ -1,13 +1,17 @@
 # Getting started
 
-This will get you going with the most basic Hub app. These instructions are for MacOS. You will need brew installed if you don't have all the required dependencies. `https://brew.sh/`. In this example, we will be building an app in [Node.js](https://nodejs.org/en/) with [Express.js](http://expressjs.com/). We will be hosting it on [Heroku](https://www.heroku.com/) for testing. You will also need the heroku tool belt which you can get here: https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+This will get you going with the most basic Hub app. These instructions are for MacOS but should work fine with other operating systems. In this example, we will be building an app in [Node.js](https://nodejs.org/en/) with [Express.js](http://expressjs.com/). We will be hosting it on [Heroku](https://www.heroku.com/) for testing. You will also need the heroku tool belt which you can get here: https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up.
 
 For more info, see the overview section of these docs.
+
+Download Node.js [here](https://nodejs.org/en/download/)
 
 ## Important Notes
 
 - Your app has to be publicly hosted for Hub to be able to work with it.
 - Your app must be hosted with https
+- The app name that you use in your code and in the hub Routes must match the name of the app that you create in the developer portal.
+(Note: all routes in the sample project have .../:appName/... in the route declaration. This is so your app can be flexible on the name.)
 
 ## Steps
 
@@ -17,15 +21,17 @@ For more info, see the overview section of these docs.
 
 ### 2. Navigate to the project you want to test out.
 
-`IE: cd SampleApps/hub/public-data`
+`IE: cd SampleApps/hub/helloWorld`
 
 ### 3. Push this code to heroku to host it for testing
 
+Now you will need to set up a new project with Heroku. We are doing this so we can host our app on a public domain easily so that Hub can read it from the cloud.
+
 ```
-rm -rf .git
-npm install
-git init && git add . && git commit -am 'my first commit'
-heroku create && git push heroku master
+rm -rf .git //Make sure that you do not have a current git directory
+npm install //In the file: package.json, we have all the app dependencies set up to download
+git init && git add . && git commit -am 'my first commit' //This creates a new git repository locally
+heroku create && git push heroku master //This creates a new Heroku instance in the cloud and pushes your code to that instance.
 ```
 
 Then follow the links in the heroku output to see your application. You should see something like this where my url was https://infinite-beach-91227.herokuapp.com/
@@ -86,12 +92,15 @@ and see your app.
 
 <img src="https://puu.sh/ueTZi/f962e859f1.png" alt="Drawing" style="width: 600px;"/>
 
-You will notice that there are no contextual items that show up. That is because the code calls the app 'HelloWorld' and you named it something different. For me, I would have to replace all instances of 'helloWorld' in app.js with 'testjonnn'
+You may notice that there are no contextual items that show up. If this happens, please check the route definitions in app.js to make sure they match the app name you created or that they take the appName anonymously. (IE: ../:appName/...)
 
 Run this command with your app name.
 
+## 7. Push an update to your
+
+As you continue to improve your app, you will need to update your codebase and push it to heroku. This can be done with the following two commands:
+
 ```
-sed -i '' 's#helloWorld#testjonn#' app.js
 git add . && git commit -am 'getting contextual working'
 git push heroku master
 ```
@@ -100,7 +109,7 @@ git push heroku master
 
 ### Command git not found
 
-Install git on your machine by doing `brew install git`
+Install git on your machine by following this guide: https://www.atlassian.com/git/tutorials/install-git
 
 ### Something in heroku is not working
 
@@ -108,4 +117,4 @@ Install git on your machine by doing `brew install git`
 
 ### Something else?
 
-Email me at jodonnell@broadsoft.com
+Email me at jodonnell@broadsoft.com or create an issue here: https://github.com/BroadSoft-Xtended/SampleApps/issues
