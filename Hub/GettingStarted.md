@@ -21,7 +21,7 @@ Download Node.js [here](https://nodejs.org/en/download/)
 
 ### 2. Navigate to the project you want to test out.
 
-`IE: cd SampleApps/hub/helloWorld`
+`IE: cd SampleApps/Hub/HelloWorld`
 
 ### 3. Push this code to heroku to host it for testing
 

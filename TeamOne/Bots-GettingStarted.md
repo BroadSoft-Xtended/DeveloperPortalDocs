@@ -1,6 +1,10 @@
 # Getting Started with Bots
 
-This will get you going with the most basic Team-One bot. These instructions are for MacOS. You will need brew installed if you don't have all the required dependencies. `https://brew.sh/`. In this example, we will be building an app in [Node.js](https://nodejs.org/en/). We will be hosting it on locally for testing.
+This will get you going with the most basic Team-One bot. In this example, we will be building an app in Node.js ([download it here](https://nodejs.org/en/download/))
+
+MacOS: You will need brew installed if you don't have all the required dependencies. `https://brew.sh/`. In this example, we will be building an app in [Node.js](https://nodejs.org/en/). We will be hosting it locally for testing.
+
+Windows/Other: Please see the docs [here](https://medium.com/@WWWillems/how-to-install-cygwin-node-js-npm-and-webpack-for-windows-7-c061443653d3) for info on how to install nodejs. 
 
 ## Important Notes
 
@@ -25,12 +29,16 @@ You should now see an bot like this:
 ### 2. Run the sample code
 
 ```
-git clone https://github.com/BroadSoft-Xtended/sample-apps.git
-cd sample-apps/teamone/TeamOne-MathBot
+git clone https://github.com/BroadSoft-Xtended/SampleApps.git
+cd sample-apps/teamone/MathBot
 rm -rf .git && git init && git add . && git commit -am 'init'
 npm install
-KEY=<yourApiKey> ORG_ID=<yourOrgId> node app.js
+KEY=<yourBotToken> ORG_ID=<yourOrgId> node app.js
 ```
+
+Where yourBotToken and yourOrgId are found by createing a bot in the Developer Portal. This can be done here: https://developer.broadsoftlabs.com/#/app/make
+
+![](https://puu.sh/vGCZi/5eb10e75fd.png)
 
 You should now see something like this:
 
