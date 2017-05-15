@@ -32,7 +32,7 @@ This panel is shown when a user interacts with another user through chat or a ph
 
 ![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/Hub/images/image4.png)
 
-The micro app an iframe that you control and host on your servers. The default size of this iframe is 288px by 470px. Users have the ability to expand the window to any height while maintaining a fixed width of 288px.
+The micro app an iframe that you control and host on your servers. The default size of this iframe is 288px by 470px. Users have the ability to expand the window to any height while maintaining a fixed width of 288px. The url for the MicroApp iframe is the base url of your app that you specify in the developer portal.
 
 ## User Actions
 
