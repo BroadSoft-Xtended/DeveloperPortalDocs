@@ -12,6 +12,10 @@ Once you inform Hub of the key and associated user, we will then send requests b
 
 Hub supports OAuth 2.0, which allows you to log the user into your application with Google, Facebook, LinkedIn, etc. and you may then want to send us the unique id that matches one of these services. For instance, if your login flow produces some sort of user token, you could then encrypt that token and send it to Hub. Hub will then send you that token back verbatim on each request and it will be your responsibility to decrypt and verify that key. This will ensure that the request to your server is actually coming from Hub and not a malicious source.
 
+## Username
+
+In many hub routes, you will need to have a username sent. You may also receive this username. This is the username that Hub has for your user. An example could be that you had sent the username to Hub for authentication. Once this happens, this is the username that Hub will send back to you with each call where applicable.
+
 ## Custom Tokens
 
 Another example is where you may just want a custom auth token that you use to validate with Hub. This custom token can literally be any string you wish. Some sample ideas for this token could be the username, user’s email, a timestamp of the first interaction with Hub or even just a static string encrypted with a secret only your application knows. This is a less secure mechanism but it may fit your needs better depending on your application.  
