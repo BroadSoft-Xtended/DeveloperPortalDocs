@@ -1,3 +1,5 @@
+# API Examples
+
 ## Obtain an API Key
 
 In order to use the Team One REST API you must obtain an *API Key*

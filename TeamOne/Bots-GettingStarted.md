@@ -38,7 +38,7 @@ KEY=<yourBotToken> ORG_ID=<yourOrgId> node app.js
 
 Where yourBotToken and yourOrgId are found by createing a bot in the Developer Portal. This can be done here: https://developer.broadsoftlabs.com/#/app/make
 
-![](https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/3.png)
+<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/3.png alt="Drawing" style="width: 600px;"/>
 
 You should now see something like this:
 
