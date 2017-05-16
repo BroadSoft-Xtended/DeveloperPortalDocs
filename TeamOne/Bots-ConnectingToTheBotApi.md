@@ -8,7 +8,7 @@ You will establish a single websocket connection to the Team-One RTM service for
 
 In order to establish a `wss://`-protocol connection to the RTM API, you must submit an authenticated request to the Team-One REST API. The REST server's response will contain the URL your application can use to establish a websocket connection.
 
-1. Invoke the [`GET /rtms/start`](https://app.intellinote.net/rest/api/v2/#!/rtms/get_rtms_start) REST endpoint by visiting:
+1. Invoke the [`GET /rtms/start`](https://developer.broadsoftlabs.com/#/app/swagger) REST endpoint by visiting:
    ```
    https://app.intellinote.net/rest/v2/rtms/start
    ```
@@ -49,35 +49,35 @@ In order to establish a `wss://`-protocol connection to the RTM API, you must su
 
 ### Event Filtering Parameters
 
-As described in the [REST documentation](https://app.intellinote.net/rest/api/v2/#!/rtms/get_rtms_start), the `GET /rtms/start` accepts several optional query-string parameters that control which events your client will be notified about.
+As described in the [REST documentation](https://developer.broadsoftlabs.com/#/app/swagger), the `GET /rtms/start` accepts several optional query-string parameters that control which events your client will be notified about.
 
 If you need more sophisticated or specialized filtering, note that you can always subscribe to a broader class of events and perform additional filtering within your client.
 
 #### General Parameters
 
- * The `org_id` and `workspace_id` parameters may contain a comma-delimited list of one or more identifiers. When present the only [chat](#chat-events),  [note](#note-events) or [typing](#typing-events) events your client will receive are those within one of the specified organizations and/or workspaces.
+ * The `org_id` and `workspace_id` parameters may contain a comma-delimited list of one or more identifiers. When present the only chat note or typing events your client will receive are those within one of the specified organizations and/or workspaces.
  &nbsp;
- * The `event_type` parameter may contain a comma-delimited list of one or more event type/subtype values from the set { `message_added`, `message_changed`, `message_deleted`, `note_added`, `note_changed`, `note_deleted` }.  When present, the only [chat](#chat-events) or [note](#note-events) events your client will be notified of are those of the specified types. (The special values `message` and `note` can be used as a shorthand way to indicate all three `_added`, `_changed` and `_deleted` types.)
+ * The `event_type` parameter may contain a comma-delimited list of one or more event type/subtype values from the set { `message_added`, `message_changed`, `message_deleted`, `note_added`, `note_changed`, `note_deleted` }.  When present, the only chat or note events your client will be notified of are those of the specified types. (The special values `message` and `note` can be used as a shorthand way to indicate all three `_added`, `_changed` and `_deleted` types.)
 &nbsp;
- * The `matching` parameter may contain a simple string or a regular expression. When present, your client will only be notified of [note events](#note-events) for which the `body` attribute contains the string or matches the pattern and will only be notified of [chat events](#chat-events) for which the `text` attribute contains the string or matches the pattern.  
+ * The `matching` parameter may contain a simple string or a regular expression. When present, your client will only be notified of note events for which the `body` attribute contains the string or matches the pattern and will only be notified of chat events for which the `text` attribute contains the string or matches the pattern.  
 
    Any value that starts and ends with a `/` character (with an optional `i` suffix following the ending `/` to indicate a case-insensitive match) such as `/^foo\s*bar/` or `/foo/i` will be interpreted as a [regular-expression](https://en.wikipedia.org/wiki/Regular_expression).
 
  #### Note-Event Specific Parameters
 
- When a note-specific filtering parameter is used, your client will not be notified of any [chat events](#chat-events).
+ When a note-specific filtering parameter is used, your client will not be notified of any chat events.
 
-  * The `note_type` parameter may contain a single or comma-delimited list of note types (`NOTE`, `TASK`, `CHAT`, `RESOURCE`, etc.). When present your  client will only be notified of [note events](#note-events) for which the `note_type` attribute of one or both of the "current" and "previous" note objects matches an element of the list.
+  * The `note_type` parameter may contain a single or comma-delimited list of note types (`NOTE`, `TASK`, `CHAT`, `RESOURCE`, etc.). When present your  client will only be notified of note events for which the `note_type` attribute of one or both of the "current" and "previous" note objects matches an element of the list.
 
  Note-specific and chat-specific parameters cannot be used at the same time.
 
 #### Chat-Event Specific Parameters
 
-When a chat-specific filtering parameter is used, your client will not be notified of any [note events](#note-events).
+When a chat-specific filtering parameter is used, your client will not be notified of any note events.
 &nbsp;
   * The `from_me` parameter is a boolean-valued (true/false) flag.
-    * When `true`, your client will only be notified of [chat events](#chat-events) that were created by the end-user associated with your client.
-    * When `false`, your client will only be notified of [chat events](#chat-events) that were _NOT_ created by the associated end-user.
+    * When `true`, your client will only be notified of chat events that were created by the end-user associated with your client.
+    * When `false`, your client will only be notified of chat events that were _NOT_ created by the associated end-user.
 &nbsp;
 * The `at_me` and `at_us` parameters are also boolean-valued (true/false) flags.
 

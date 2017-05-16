@@ -63,7 +63,7 @@ For compatibility with Slack, the following redundant attribute is also included
 
  * `ts` is the `note_id` value (as a string).
 
-If an error occurs, you'll get back an [error response](#error-handling) instead.
+If an error occurs, you'll get back an error response instead.
 
 ## Receiving Chat Messages
 
@@ -181,7 +181,7 @@ When a chat message in a workspace your client has access to is edited, you'll r
 ```
 
 Where
-  * `type`, `user`, `screen_name`, `given_name`, `family_name`, `workspace_id`, `workspace_name`, `workspace_1on1`, `org_id`, `org_name`, `text`, `at_me`, `at_us`, `from_me`, `note_id`, `channel` and `ts` play the same role as they did in the ["chat message added"](#chat-message-added) case.
+  * `type`, `user`, `screen_name`, `given_name`, `family_name`, `workspace_id`, `workspace_name`, `workspace_1on1`, `org_id`, `org_name`, `text`, `at_me`, `at_us`, `from_me`, `note_id`, `channel` and `ts` play the same role as they did in the "chat message added" case.
   * `subtype` is `"message_changed"`, indicating that this chat message was changed.
   * `hidden` is `true`, as it is for all `message_changed` and `message_deleted` payloads. If you are only interested in new messages, you might ignore all payloads for which `hidden` is `true`.
   * `message` contains a description of message _after_ the change was applied.
@@ -231,7 +231,7 @@ When a chat message is removed from a workspace your client has access to, you'l
 ```
 
 Where
-  * `type`, `user`, `screen_name`, `given_name`, `family_name`, `workspace_id`, `workspace_name`, `workspace_1on1`, `org_id`, `org_name`, `text`, `at_me`, `at_us`, `from_me`, `note_id`, `channel` and `ts` play the same role as they did in the ["chat message added"](#chat-message-added) case.
+  * `type`, `user`, `screen_name`, `given_name`, `family_name`, `workspace_id`, `workspace_name`, `workspace_1on1`, `org_id`, `org_name`, `text`, `at_me`, `at_us`, `from_me`, `note_id`, `channel` and `ts` play the same role as they did in the "chat message added" case.
   * `subtype` is `message_deleted`, indicating that this chat message was deleted.
   * `hidden` is `true`, as it is for the `message_changed` case.
   * `previous_message` contains a description of the chat message just before it was removed.
@@ -289,7 +289,7 @@ For compatibility with Slack, once again the redundant attribute `channel` is se
 
 ## Sending Notes
 
-To create, modify or delete a note (of any type&mdash;including NOTE, TASK, RESOURCE (file), etc.), you may use [REST API tunneling](#rest-api-tunneling) or interact with the REST API directly.  There is no note equivalent of the `message` request payload.
+To create, modify or delete a note (of any type&mdash;including NOTE, TASK, RESOURCE (file), etc.), you may use REST API tunneling or interact with the REST API directly.  There is no note equivalent of the `message` request payload.
 
 ## Receiving Notes
 
@@ -463,7 +463,7 @@ Where:
 
  * `event_uuid` is a unique identifier for this payload
  * `event_type` is `"note_changed"`, indicating that a note was modified.
- * `event_uuid`, `org_id`, `workspace_id`, `note_id` and `note_type` play the same role as in the [`note_added`](#note-added) case.
+ * `event_uuid`, `org_id`, `workspace_id`, `note_id` and `note_type` play the same role as in the `note_added` case.
  * `note` describes the current version of the note (just _after_ the change was applied).
  * `previous_note` describes the previous version of the note (just _before_ the change was applied).
 
@@ -532,7 +532,7 @@ Where:
 
  * `event_uuid` is a unique identifier for this payload
  * `event_type` is `"note_deleted"`, indicating that a note was removed.
- * `event_uuid`, `org_id`, `workspace_id`, `note_id` and `note_type` play the same role as in the [`note_added`](#note-added) case.
+ * `event_uuid`, `org_id`, `workspace_id`, `note_id` and `note_type` play the same role as in the `note_added` case.
  * `previous_note` describes the previous version of the note (just before the note was removed).
 
  Again, for Slack compatibility, the following attributes are also included:

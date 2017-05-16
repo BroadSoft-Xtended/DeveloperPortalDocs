@@ -38,7 +38,7 @@ parameters:
   * `response_type` - following the OAuth2 specification this must be
     the value `code`.
 
-  * `client_id` - the ["API Key" assigned to your application](#obtain-an-api-key).
+  * `client_id` - the "API Key" assigned to your application.
 
   * `scope` - a comma-delimited list of the scopes your application is
     requesting access to, e.g., `read,write`.
@@ -62,14 +62,14 @@ For example, let's assume that:
 Your application must then direct the user to the URL:
 
 ```no-highlight
-https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
+https://app.intellinote.net/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback
 ```
 
 For example, you might provide the user with a direct link in your
 HTML code:
 
 ```html
-<a href="https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}">Link to Team One Account</a>
+<a href="https://app.intellinote.net/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback">Link to Team One Account</a>
 ```
 
 or your server might redirect the user to Team One by returning a
@@ -77,7 +77,7 @@ HTTP 302 response:
 
 ```http
 HTTP/1.1 302 Found
-Location: https://{request.url.host}{@uri path="/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback"/}
+Location: https://app.intellinote.net/auth/oauth2/authorization?response_type=code&client_id=lsJLcwxUyll0p&scope=read,write&redirect_uri=https://example.com/oauth/callback
 ```
 
 The end-user will be presented with a form by which they can authorize
@@ -107,8 +107,7 @@ An ***access token*** is a credential that gives your application
 A ***refresh token*** is a credential that allows your application
 to obtain a new  *access token* when the current one becomes stale.
 
-Given an [*authorization code*](#obtain-an-authorization-code-) (and
-[the *client_id* and *client_secret* values assigned to your application](#obtain-an-api-key))
+Given an *authorization code* and the *client_id* and *client_secret* values assigned to your application,
 you can obtain an *access token* and an optional *refresh-token* by submitting a server-to-server
 request that includes all three values.
 
@@ -182,8 +181,7 @@ When this happens, you will start to recieve 401 (Authentication Required)
 responses from the server.  This is your cue that it is time to refresh
 the *access token*.
 
-Given an *refresh token* (and
-[the *client_id* and *client_secret* values assigned to your application](#obtain-an-api-key))
+Given an *refresh token* (and the *client_id* and *client_secret* values assigned to your application
 you can obtain an *access token* (and an optionally, a replacement *refresh-token*) by submitting
 a server-to-server request that includes all three values.
 
@@ -246,7 +244,7 @@ Content-Type: application/json
 ---
 ## Obtain an *Access Token* using the Implicit Workflow
 
-The OAuth2 *implicit workflow* is an alternative to [the *authorization-token*-based process described above](#obtain-an-access-token-).
+The OAuth2 *implicit workflow* is an alternative to the *authorization-token*-based process described above.
 
 In the *implicit workflow* no persistent *refresh token* is
 provided.  The end-user must authenticate to the Team One service
@@ -269,7 +267,7 @@ parameters:
   * `response_type` - following the OAuth2 specification this must be
     the value `token`.
 
-  * `client_id` - the ["API Key" assigned to your application](#obtain-an-api-key).
+  * `client_id` - the "API Key" assigned to your application.
 
   * `scope` - a comma-delimited list of the scopes your application is
     requesting access to, e.g., `read,write`.
@@ -403,7 +401,7 @@ to obtain a new *access token*, as described above.
 
 ## List Organizations
 
-With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP GET request to the path `/v2.0/orgs` to obtain a list of *organizations* the end-user belongs to.
+With an active *access_token* you can submit an HTTP GET request to the path `/v2.0/orgs` to obtain a list of *organizations* the end-user belongs to.
 
 ### Request
 
@@ -451,7 +449,7 @@ Content-Type: application/json
 
 ## List Workspaces
 
-With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspaces` to obtain a list of *workspaces* within the specified *organization* that the end-user has access to.  (Where `[ORG_ID]` is a valid [organization identifier](#list-organizations).)
+With an active *access_token* you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspaces` to obtain a list of *workspaces* within the specified *organization* that the end-user has access to.  (Where `[ORG_ID]` is a valid organization identifier.
 
 ### Request
 
@@ -503,7 +501,7 @@ Content-Type: application/json
 ---
 ## List Notes
 
-With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspace/[WORKSPACE_ID]/notes` to obtain a list of *notes* (including *tasks* and *discussions*)  that the end-user has access to within the specified *workspace*.  (Where `[WORKSPACE_ID]` is a valid [workspace identifier](#list-workspaces) and `[ORG_ID]` is a valid [organization identifier](#list-organizations) for the organization that contains the specified workspace.)
+With an active *access_token* you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspace/[WORKSPACE_ID]/notes` to obtain a list of *notes* (including *tasks* and *discussions*)  that the end-user has access to within the specified *workspace*.  (Where `[WORKSPACE_ID]` is a valid workspace identifier and `[ORG_ID]` is a valid organization identifier for the organization that contains the specified workspace.)
 
 ### Request
 
@@ -585,7 +583,7 @@ Content-Type: application/json
 ---
 ## List Incomplete Tasks Assigned to a User
 
-With an active [*access_token*](#obtain-an-access-token-) you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspace/[WORKSPACE_ID]/notes` to obtain a list of *notes* (including *tasks* and *discussions*)  that the end-user has access to within the specified *workspace*.  (Where `[WORKSPACE_ID]` is a valid [workspace identifier](#list-workspaces) and `[ORG_ID]` is a valid [organization identifier](#list-organizations) for the organization that contains the specified workspace.)
+With an active *access_token* you can submit an HTTP GET request to the path `/v2.0/org/[ORG_ID]/workspace/[WORKSPACE_ID]/notes` to obtain a list of *notes* (including *tasks* and *discussions*)  that the end-user has access to within the specified *workspace*.  (Where `[WORKSPACE_ID]` is a valid workspace identifier and `[ORG_ID]` is a valid organization identifier for the organization that contains the specified workspace.)
 
 ### Request
 
@@ -595,7 +593,7 @@ The request may contain one of several query-string parameters that filter or ot
   * `complete=false` to limit the response to tasks that haven't been completed yet, and
   * `assignee==user525` to limit the response to the tasks assigned to a specific user (where `user525` is this user's `user_id` value).
 
-(See the [API documentation](/api/v2.0/#!/notes/get_org_org_id_workspace_workspace_id_notes) for a complete list of and additional information on the supported parameters.)
+(See the [API documentation](https://developer.broadsoftlabs.com/#/app/swagger) for a complete list of and additional information on the supported parameters.)
 
 ### Request
 
