@@ -20,11 +20,11 @@ If you don't have a Team-One account yet, don't worry, you can get one free for 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New Bot' button in the Team-One section. Enter a bot first name and last name and select the organization you recognize from the drop down. Then click 'Create Bot'.
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/1.png" alt="Drawing" style="width: 300px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/1.png" alt="Drawing" style="width: 300px;"/>
 
 You should now see an bot like this:
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/2.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/2.png" alt="Drawing" style="width: 600px;"/>
 
 ### 2. Run the sample code
 
@@ -38,11 +38,11 @@ KEY=<yourBotToken> ORG_ID=<yourOrgId> node app.js
 
 Where yourBotToken and yourOrgId are found by createing a bot in the Developer Portal. This can be done here: https://developer.broadsoftlabs.com/#/app/make
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/3.png alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/3.png alt="Drawing" style="width: 600px;"/>
 
 You should now see something like this:
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/4.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/4.png" alt="Drawing" style="width: 600px;"/>
 
 ### 3. Talk to your bot in Team-One
 
@@ -50,17 +50,17 @@ Go to https://app.intellinote.net/
 
 Search for the bot user you created by name.
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/5.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/5.png" alt="Drawing" style="width: 200px;"/>
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/6.png" alt="Drawing" style="width: 300px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/6.png" alt="Drawing" style="width: 300px;"/>
 
 Say '/math' to the bot.
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/7.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/7.png" alt="Drawing" style="width: 600px;"/>
 
 Your bot is now working.
 
-<img src="https://raw.githubusercontent.com/BroadsoftLabs/BroadsoftExternalDocs/master/TeamOne/images/8.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/8.png" alt="Drawing" style="width: 600px;"/>
 
 ## Its not working for me.
 
