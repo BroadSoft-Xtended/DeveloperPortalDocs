@@ -24,7 +24,7 @@ In the notifications bar, you’ll have an icon for your application. This icon 
 
 ## Contextual
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/24.png)
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/24.png" alt="Drawing" style="width: 600px;"/>
 
 This panel is shown when a user interacts with another user through chat or a phone call. When this happens, all user enabled apps are sent a request for all user data that they want to display in the contextual panel. This is usually data that is relevant to the users in the conversation. Contextual data is pulled in for all apps and ordered my most recent.
 
