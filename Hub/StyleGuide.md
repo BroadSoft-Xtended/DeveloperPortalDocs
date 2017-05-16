@@ -10,23 +10,23 @@ Open Sans is the standard typeface for Hub, the font stack should specify Open S
 
 ## MicroApp Search Box
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image6.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image6.png)
 
 ## MicroApp Tabs Filter
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image7.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image7.png)
 
 ## MicroApp List Item
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image8.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image8.png)
 
 ## Contextual Timeline Item
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image9.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image9.png)
 
 ## Colors
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image10.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image10.png)
 
 ## Other User Interface Elements not Discussed
 

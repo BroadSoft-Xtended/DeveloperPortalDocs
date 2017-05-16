@@ -24,13 +24,13 @@ In the notifications bar, you’ll have an icon for your application. This icon 
 
 ## Contextual
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/24.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/24.png)
 
 This panel is shown when a user interacts with another user through chat or a phone call. When this happens, all user enabled apps are sent a request for all user data that they want to display in the contextual panel. This is usually data that is relevant to the users in the conversation. Contextual data is pulled in for all apps and ordered my most recent.
 
 ## MicroApp
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/25.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/25.png)
 
 The micro app an iframe that you control and host on your servers. The default size of this iframe is 288px by 470px. Users have the ability to expand the window to any height while maintaining a fixed width of 288px. The url for the MicroApp iframe is the base url of your app that you specify in the developer portal.
 
@@ -40,7 +40,7 @@ When users take actions in Hub, your app will be notified and it is up to you to
 
 ## Settings
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image5.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image5.png)
 
 When the user first logs into the Hub application, they will see a settings page for all applications. This is where your app will be shown to the users for the first time. The user will attempt to enable your application and then you can start to provide data to that user.
 
@@ -88,6 +88,6 @@ If you are providing more than thirty results to a user, your data must be paged
 
 ## Sub-Filters for MicroApp Data
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image11.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image11.png)
 
 If you wish to filter your data into multiple views you will need to have sub-filters in your micro app. The current filter should be highlighted and clicking on other tabs should filter the view.

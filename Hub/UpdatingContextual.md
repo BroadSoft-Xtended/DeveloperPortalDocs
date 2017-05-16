@@ -2,7 +2,7 @@
 
 Contextual is where you will display all information that is shared between the two users who are interaction.
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image12.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image12.png)
 
 When the user opens a conversation with one or many users, we will send you the following post request:
 

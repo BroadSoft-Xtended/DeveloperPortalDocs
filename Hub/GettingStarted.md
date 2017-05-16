@@ -36,7 +36,7 @@ heroku create && git push heroku master //This creates a new Heroku instance in 
 
 Then follow the links in the heroku output to see your application. You should see something like this where my url was https://infinite-beach-91227.herokuapp.com/
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image13.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image13.png" alt="Drawing" style="width: 600px;"/>
 
 ### 4. Create a Hub App in the Dev Portal
 
@@ -48,7 +48,7 @@ Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/
 
 You should now see an app like this:
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/image14.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/image14.png" alt="Drawing" style="width: 600px;"/>
 
 Click the app to see the app settings.
 
@@ -58,27 +58,27 @@ Go to https://app.intellinote.net/
 
 Click on the 'Manage Integrations' button in the bottom left
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/15.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/15.png" alt="Drawing" style="width: 200px;"/>
 
 Click on 'Manage Hub Settings'
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/16.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/16.png" alt="Drawing" style="width: 200px;"/>
 
 Once the list loads, scroll down to see your application and toggle it on.
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/17.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/17.png" alt="Drawing" style="width: 600px;"/>
 
 Go back to https://app.intellinote.net and go to your personal workspace.
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/18.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/18.png" alt="Drawing" style="width: 200px;"/>
 
 Click your app:
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/19.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/19.png" alt="Drawing" style="width: 200px;"/>
 
 and see it in action!
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/20.png" alt="Drawing" style="width: 200px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/20.png" alt="Drawing" style="width: 200px;"/>
 
 You can view contextual information by adding a user to your organization or talking to an existing user.
 
@@ -86,11 +86,11 @@ You can view contextual information by adding a user to your organization or tal
 
 Click on the contextual tab at the top of the user conversation
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/21.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/21.png" alt="Drawing" style="width: 600px;"/>
 
 and see your app.
 
-<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/Hub/images/22.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/22.png" alt="Drawing" style="width: 600px;"/>
 
 You may notice that there are no contextual items that show up. If this happens, please check the route definitions in app.js to make sure they match the app name you created or that they take the appName anonymously. (IE: ../:appName/...)
 

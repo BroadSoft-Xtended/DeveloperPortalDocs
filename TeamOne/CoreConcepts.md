@@ -7,7 +7,7 @@ It *is* an introduction to some of the core concepts you'll encounter within the
 <p><i style="color:#666">Relationships between several core entities within Team One.</i></p>
 </div>
 
-![](https://raw.githubusercontent.com/BroadSoft-Xtended/BroadsoftExternalDocs/master/TeamOne/images/coreConcepts1.png)
+![](https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/TeamOne/images/coreConcepts1.png)
 
 ## Users
 
