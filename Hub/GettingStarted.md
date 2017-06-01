@@ -10,8 +10,6 @@ Download Node.js [here](https://nodejs.org/en/download/)
 
 - Your app has to be publicly hosted for Hub to be able to work with it.
 - Your app must be hosted with https
-- The app name that you use in your code and in the hub Routes must match the name of the app that you create in the developer portal.
-(Note: all routes in the sample project have .../:appName/... in the route declaration. This is so your app can be flexible on the name.)
 
 ## Steps
 
@@ -76,13 +74,15 @@ Click your app:
 
 <img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/19.png" alt="Drawing" style="width: 200px;"/>
 
-and see it in action!
+and see it in action! This is the Micro App view and it comes from your application. This is an iframe that is hosted on your application at `https://mySuperCoolApp.com/microapp`.
 
 <img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/20.png" alt="Drawing" style="width: 200px;"/>
 
 You can view contextual information by adding a user to your organization or talking to an existing user.
 
-### 6. Get contextual working
+### 6. Contextual
+
+This is an iframe that is hosted on your application at `https://mySuperCoolApp.com/contextual`.
 
 Click on the contextual tab at the top of the user conversation
 
@@ -92,10 +92,6 @@ and see your app.
 
 <img src="https://raw.githubusercontent.com/BroadSoft-Xtended/DeveloperPortalDocs/master/Hub/images/22.png" alt="Drawing" style="width: 600px;"/>
 
-You may notice that there are no contextual items that show up. If this happens, please check the route definitions in app.js to make sure they match the app name you created or that they take the appName anonymously. (IE: ../:appName/...)
-
-Run this command with your app name.
-
 ## 7. Push an update to your
 
 As you continue to improve your app, you will need to update your codebase and push it to heroku. This can be done with the following two commands:
@@ -104,17 +100,3 @@ As you continue to improve your app, you will need to update your codebase and p
 git add . && git commit -am 'getting contextual working'
 git push heroku master
 ```
-
-## Its not working for me
-
-### Command git not found
-
-Install git on your machine by following this guide: https://www.atlassian.com/git/tutorials/install-git
-
-### Something in heroku is not working
-
-` heroku logs -t` will tail the logs for you.
-
-### Something else?
-
-Email me at jodonnell@broadsoft.com or create an issue here: https://github.com/BroadSoft-Xtended/SampleApps/issues
