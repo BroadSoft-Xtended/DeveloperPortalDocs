@@ -4,12 +4,9 @@
 
 Contextual data is the data shared between users. This data is shown when a user engages in conversation with another user.
 
-## I can't log into the chrome phone anymore to test my app.
+## I don't have access to Team-One
 
-Please try logging out and logging back in. Then try a shutting down all chrome pages and chrome apps after clearing your cache. If you are using
-http://xsp.broadsoftlabs.com to log into the chrome phone, you can try using either xsp1 or xsp2 instead of xsp.
-
-If all else fails here, please email us at jodonnell@broadsoft.com to log a ticket.
+You can always get a 30 day free trial with a GMail account here: https://app.intellinote.net/
 
 ## Where is the microapp url set
 
@@ -26,3 +23,15 @@ router.options('/*', function(req, res) {
 res.send(200, 'CHECKOUT,CONNECT,COPY,DELETE,GET,HEAD,LOCK,M-SEARCH,MERGE,MKACTIVITY,MKCALENDAR,MKCOL,MOVE,NOTIFY,PATCH,POST,PROPFIND,PROPPATCH,PURGE,PUT,REPORT,SEARCH,SUBSCRIBE,TRACE,UNLOCK,UNSUBSCRIBE');
 });
 ```
+
+## Command git not found
+
+Install git on your machine by following this guide: https://www.atlassian.com/git/tutorials/install-git
+
+## Something in heroku is not working
+
+`heroku logs -t` will tail the logs for you.
+
+## Something else?
+
+Email me at jodonnell@broadsoft.com or create an issue here: https://github.com/BroadSoft-Xtended/SampleApps/issues

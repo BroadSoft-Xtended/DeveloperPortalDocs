@@ -1,73 +1,67 @@
 # API Authorization
 
-Once your application is registered, you'll be able to interface with Hub. As the user takes actions in Hub, we will send you requests. You then respond to those requests with data that we show in Contextual and Notifications. We also provide a mechanism for you to send us updates to your data as they become available to the user.
+When you interact with the Hub api, you will be sending an auth token.
 
-## Authentication
+Where auth can be any JSON you want. IE:
 
-As a developer, you are to send and receive secure requests. The way this works is that Hub will request a secure key on a per user basis. This key can be any string that you wish to send to Hub. Hub will then send this string back to your application for this user each time secure interactions are required. However, if it is actual user data, such as an access_token or a secure key, we recommend that you encrypt this key before sending it to us.
+```
+auth = {
+  token: 'g35un4hd7dbdkd876whenjdjkc6dhjsdkysdh',
+  date: new Date(),
+  organization: 'Verizon',
+  verizonUsername: 'TimBingly23'
+};
+```
 
-Once you inform Hub of the key and associated user, we will then send requests back to you with that same key. This is how you will determine if it is a secure request.
+It can also be as simple as: `auth = {id: 1234}`
 
-## OAuth 2
+## Step 1 - A user decides to enable your app from settings
 
-Hub supports OAuth 2.0, which allows you to log the user into your application with Google, Facebook, LinkedIn, etc. and you may then want to send us the unique id that matches one of these services. For instance, if your login flow produces some sort of user token, you could then encrypt that token and send it to Hub. Hub will then send you that token back verbatim on each request and it will be your responsibility to decrypt and verify that key. This will ensure that the request to your server is actually coming from Hub and not a malicious source.
-
-## Username
-
-In many hub routes, you will need to have a username sent. You may also receive this username. This is the username that Hub has for your user. An example could be that you had sent the username to Hub for authentication. Once this happens, this is the username that Hub will send back to you with each call where applicable.
-
-## Custom Tokens
-
-Another example is where you may just want a custom auth token that you use to validate with Hub. This custom token can literally be any string you wish. Some sample ideas for this token could be the username, user’s email, a timestamp of the first interaction with Hub or even just a static string encrypted with a secret only your application knows. This is a less secure mechanism but it may fit your needs better depending on your application.  
-
-## How we will attempt to retrieve a custom token
-
-The following will occur if your application is set to Private upon registration and when a user tries to log in to your app from the settings page. We will open a page pointing to your server at:
+Users can select your app from the settings page of Hub. Once they trigger the app to be on, you will be sent the following request that you app must handle:
 
 ```
 GET
 
-URL: https://<yourBaseUrl>/<yourAppName>/authenticate?hubUrl=<theUrlWhereHubIsHosted>&hubLoginToken=<theHubLoginTokenForUser>
+URL: https://myHostedApp.com/authenticate?callback=https://theHubUrlTheUserIsUsing.com
 ```
 
-You will need to associate this token with a user in your database. This is because hub will send that token back to you on each request. You will need to match the hubLoginToken to a user to know which user hub is requesting data for.
-
-Then you can render your login page or any OAuth integration with other providers in at that time.
-Upon successful login, you will send us the encrypted authentication token as a POST
+When you receive this call, you need to re-direct the user to your signup page.
 
 ```
-POST
+// Save the query params for later
+req.session.callback = req.query.callback;
 
-URL: https://<hubUrl>/<yourAppName>/:username/auth
+res.writeHead(307, {
+  'Cache-Control': 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0',
+  Location: '/signup.html'
+});
+res.end();
+```
 
-Post Body: {
-  auth: 'my custom auth string'
+## Step 2 - Have the user log into your app
+
+Once the user is on signup.html, then you can have them log into your app in any way that you wish. In our example, lets say that they logged in with google and our app got back their google email and an access token that we then encrypted and stored in our database.
+
+## Step 3 - Re-direct the user back to the Hub success page
+
+```
+// After signup is complete to google
+
+auth = {
+  token: 'hdf8d87fdiujfosdf987sdfujsdflksd98f7',
+  googleEmail: 'bobTheBuilder@gmail.com'
 }
+
+// In our case, we saved the hubUrl in the session of our app as callback
+// username is the name of the user in our 3rd party app
+
+var url = req.session.callback + '?auth=' + JSON.stringify(auth) + '&username=' + username;
+
+return res.redirect(url);
 ```
 
-After this POST returns a success message, you will need to redirect the user to the Hub success page.
+## Step 4 - Calls after authenticate
 
-```
-  var options = {
-    method: 'POST',
-    uri: 'https://core.broadsoftlabs.com/v1/' + req.session.appName + '/jodonnell@broadsoft.com/auth',
-    body: {
-      hubLoginToken: req.session.hubLoginToken,
-      auth: 'jodonnell@broadsoft.com'
-    },
-    json: true
-  };
+Now, whenever you app is called by Hub, you will get the auth and username as query paramaters. This also includes when Hub renders either the Micro App iframe or the Contextual Iframe.
 
-  // Once you successfully send that request off to hub, you have to redirect the user to the url that hub tells you
-  // This will show the user the Hub login success page.
-  rp(options).then(function(result) {
-    res.redirect(result.url);
-  }).catch(function(error) {
-    console.log('Could not post to hub', error.message);
-    res.send(500, error);
-  })
-```
-
-Hub will store this token and associate with your application and a user. Then this token will be sent with all Hub requests.
-
-We will respond to the POST with a URL that you should be redirecting to in order to display the Hub authentication success or error page.
+This also happens when Hub calls your app for notification count.
