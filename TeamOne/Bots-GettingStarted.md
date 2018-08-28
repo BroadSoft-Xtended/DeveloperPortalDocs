@@ -16,7 +16,7 @@ Windows/Other: Please see the docs [here](https://medium.com/@WWWillems/how-to-i
 
 Go here and log in. https://developer.broadsoftlabs.com/#/app/login
 
-If you don't have a Team-One account yet, don't worry, you can get one free for 30 days. If you need longer than 30 days email me at jodonnell@broadsoft.com
+If you don't have a Team-One account yet, don't worry, you can get one free for 30 days. If you need longer than 30 days email me at hubdeveloperportal@broadsoft.com 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New Bot' button in the Team-One section. Enter a bot first name and last name and select the organization you recognize from the drop down. Then click 'Create Bot'.
 

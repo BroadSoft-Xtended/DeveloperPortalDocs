@@ -34,4 +34,4 @@ Install git on your machine by following this guide: https://www.atlassian.com/g
 
 ## Something else?
 
-Email me at jodonnell@broadsoft.com or create an issue here: https://github.com/BroadSoft-Xtended/SampleApps/issues
+Email me at hubdeveloperportal@broadsoft.com  or create an issue here: https://github.com/BroadSoft-Xtended/SampleApps/issues

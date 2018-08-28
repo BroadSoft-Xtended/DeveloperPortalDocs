@@ -10,7 +10,7 @@ Hub is a part of several products at Broadsoft. (Team-One, CC-One, UC-One) Hub p
 
 To do this, Hub apps have three different areas where data can be delivered: the MicroApp panel, the Notification bar, and the Contextual panel.   
 
-Below is an illustration of how Hub is displayed in Team-One. Anyone can get a free trial Team-One account. Email us at jodonnell@broadsoft.com if you need your free trial extended.
+Below is an illustration of how Hub is displayed in Team-One. Anyone can get a free trial Team-One account. Email us at hubdeveloperportal@broadsoft.com  if you need your free trial extended.
 
 ## Notifications
 
@@ -58,7 +58,7 @@ In the case where you are not sure how to host an application on the internet, y
 
 ## App Registration
 
-While developing your app you can test it by creating an app here: https://developer.broadsoftlabs.com/#/app/make. After you create your application, you can go to the Hub Settings in Team-One to see your application that is private to only you and the list of emails you allow. Once your app is ready for a wider audience, email us at jodonnell@broadsoft.com.
+While developing your app you can test it by creating an app here: https://developer.broadsoftlabs.com/#/app/make. After you create your application, you can go to the Hub Settings in Team-One to see your application that is private to only you and the list of emails you allow. Once your app is ready for a wider audience, email us at hubdeveloperportal@broadsoft.com .
 
 ## App Review/Schedule a Production Release
 
