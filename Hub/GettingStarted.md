@@ -40,7 +40,7 @@ Then follow the links in the heroku output to see your application. You should s
 
 Go here and log in. https://developer.broadsoftlabs.com/#/app/login
 
-If you don't have a Team-One account yet, don't worry, you can get one free for 30 days. If you need longer than 30 days email me at jodonnell@broadsoft.com
+If you don't have a Team-One account yet, don't worry, you can get one free for 30 days. If you need longer than 30 days email me at hubdeveloperportal@broadsoft.com 
 
 Once you have logged in to Team-One, go to: https://developer.broadsoftlabs.com/#/app/make and click the 'Create New App' button in the Hub section. Enter an application name that means something to you and the URL you got from heroku. Make sure the url is in https form.
 
